@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Liubov Kleimenova](https://up.htmlacademy.ru/htmlcss/23/user/894043).
-* Наставник: `Александр Уразаев`.
+* Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
 
