@@ -28,7 +28,7 @@
   		</section>
 
   		<section class="about-sedona-reasons">
-  			<h2 class="visually-hidden">Причины</h2>
+  			<h2 class="visually-hidden">Причины выбрать Седону</h2>
   			<p class="five-reasons">
   				Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон
   			</p>
@@ -99,40 +99,50 @@
   			<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
   		</div>
 
-  		<!--
-      <section class="hotels-search"><
-  			<h2 class="hotels-search-talbe">Поиск гостиницы в Седоне</h2>
-  			<form action="" method="">
+  		
+      <section class="hotels-search">
+  			<h2 class="hotels-search-table">Поиск гостиницы в Седоне</h2>
+  			<form action="https://echo.htmlacademy.ru" method="post">
   				<label for="date-in">
   					<span class="label-text">Дата заезда</span>
   				</label>
-  				<input type="date" name="date-in" id="date-in" value="2017-04-24">
-  			</form>
-  			<form action="" method="">
+  				<input type="text" name="date-in" id="date-in" value="2017-04-24">
+          <button aria-label="Выберите дату заезда">
+            <img src="img/calendar.svg">
+          </button>
+  			
   				<label for="date-out">
   					<span class="label-text">Дата выезда</span>
   				</label>
-  				<input type="date" name="date-out" id="date-out" value="2017-07-04">
-  			</form>
-  			<form action="" method="">
+  				<input type="text" name="date-out" id="date-out" value="2017-07-04">
+          <button aria-label="Выберите дату выезда">
+            <img src="img/calendar.svg">
+          </button>
+  			
   				<label for="adults-quantity">
-  					<span class="label-text">Дата заезда</span>
+  					<span class="label-text">Количество взрослых</span>
   				</label>
+          
+          <button aria-label="Уменьшить"><span class="symbols">-</span></button>
   				<input type="" name="adults-quantity" id="adults-quantity" value="2">
-  			</form>
-  			<form action="" method="">
+          <button aria-label="Добавить"><span class="symbols">+</span></button>
+  			
   				<label for="children-quantity">
-  					<span class="label-text">Дата заезда</span>
+  					<span class="label-text">Количество детей</span>
   				</label>
-  				<input type="" name="children-quantity" id="children-quantity" value="0">
-  			</form>
-  			<button>
+          
+  				<button aria-label="Уменьшить"><span class="symbols">-</span></button>
+          <input type="" name="children-quantity" id="children-quantity" value="0">
+          <button aria-label="Добавить"><span class="symbols">+</span></button>
+
+          <button aria-label="Кнопка поиска">
   				Найти
-  			</button>	
+  			  </button>	
+        </form> 
   		</section>
-    -->
+    
   		<div class="map">
-        <img src="img/map.jpg" width="1200px" height="594px" alt="Карта штата">
+        <img src="img/map.jpg" width="1200px" height="594px" alt="В Седону можно добраться по шоссе 17, съехав на 89А или 179">
   		</div>
 
   	</main>
@@ -143,9 +153,9 @@
   		</p>
   		<div class="footer-social">
   			<ul>
-  				<li><a class="social-button" href="#">Twitter</a></li>
-  				<li><a class="social-button" href="#">Facebook</a></li>
-  				<li><a class="social-button" href="#">Youtube</a></li>
+  				<li><a class="social-button" href="#" aria-label="Седона в Твиттере">Twitter</a></li>
+  				<li><a class="social-button" href="#" aria-label="Седона на Фейсбуке">Facebook</a></li>
+  				<li><a class="social-button" href="#" aria-label="Седона на Ютьюбе">Youtube</a></li>
   			</ul>	
   		</div>
   		<p class="footer-copyright">
