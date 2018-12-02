@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+  
+    /*font*/
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    background-color: #ffffff;	
+}
+.main-header {
+    margin: 0;
+    padding: 0;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    color: #000000;
+    background-color: #ffffff;
+
+}
+
+.site-navigation a {
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	color: #81b3d2;
+}
+
+.site-navigation a:active {
+	color: rgba(0 0 0 0.3);
+}
+
+.about-sedona-general {
+	margin: 0px;
+    color: #000000;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+
+	background-color: #ffffff;
+}
+
+/*не работает??*/
+.about-sedona-general::before {
+	background-image: url("img/background-photo.jpg");
+}
+
+.about-sedona-reasons {
+	background-color: #ffffff;
+}
+
+.reasons li {
+	margin: 0; /*почему отступы от левого края?*/
+    padding: 0;
+}
+
+.first,
+.second {
+	background-color: #81b3d2;
+    color: #ffffff;
+}
+
+}
+.other {
+    background-color: #eeeeee; /*почему не работает?*/
+    color: #333333;
+}
+
+.reasons-heading,
+.inside-sedona-heading {
+	font-weight: bold;
+	line-height: 21px;
+    font-size: 21px;
+}
+
+.inside-sedona {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.other .reasons-heading,
+.inside-sedona-heading {
+	color: #000000;
+}
+
+.suggestion {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.suggestion b {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 36px;
+	color: #000000;
+
+}
+
+.hotels-search {
+	background-color: #ffffff;
+
+
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.hotels-search-table {
+	color: #ffffff;
+	font-size: 21px;
+
+	background-color: #766357;
+}
+
+/*не работет?*/
+.find {
+	background-color: #81b3d2;
+	border: none;
+
+    font: inherit;
+	font-size: 21px; 
+	color: #ffffff;
+}
+
+.hotels {
+	text-align: left;
+
+	background-color: #ffffff;
+}
+
+.hotel-name {
+	color: #000000;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.rating {
+    text-align: right;
+    color: #666666;
+
+    background-color: #f2f2f2;
+}
+
+.button {
+	border: none;
+
+	font: inherit;
+	font-size: 14px; 
+	color: #ffffff;
+}
+
+.details {
+	background-color: #81b3d2;
+}
+
+.booking {
+	background-color: #776357;
+}
+
+.page-footer {
+	background-color: #ffffff;
+}

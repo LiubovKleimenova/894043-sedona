@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
   	<header class="main-header">
@@ -23,7 +26,7 @@
   		<h1 class="visually-hidden">Седона - город в Аризоне</h1>
   		<section class="about-sedona-general">
   			<div>
-  				Седона - небольшой городок в Аризоне,заслуживающий большего!
+  				Седона - небольшой городок в Аризоне, заслуживающий большего!
   			</div>
   		</section>
 
@@ -35,7 +38,7 @@
 
   			<ul class="reasons">
   				
-  				<li>
+  				<li class="first">
   					<h3 class="reasons-heading">Настоящий городок</h3>
   					<div class="reason-one">
   						<p class="reason-number">- №1 -</p>
@@ -58,7 +61,7 @@
   					</ul>
   				</li>
   				
-  				<li>
+  				<li class="second">
   					<h3 class="reasons-heading">Там есть мост дьявола</h3>
   					<div class="reason-two">
   						<img src="img/devil-bridge.jpg" class="reason-two-picture" width="800px" height="256px" alt="Мост дьявола">
@@ -67,7 +70,7 @@
   					</div>	
   				</li>
 
-  				<li>
+  				<li class="other">
   					<h3 class="reasons-heading">Небольшая площадь</h3>
   					<div class="other-reasons">
   						<p class="reason-number">- №3 -</p>
@@ -75,7 +78,7 @@
             </div>  	
   				</li>
 
-  				<li>
+  				<li class="other">
   					<h3 class="reasons-heading">Красивая дорога</h3>
   					<div class="other-reasons">
   						<p class="reason-number">- №4 -</p>
@@ -83,7 +86,7 @@
             </div> 
   				</li>
 
-  				<li>
+  				<li class="other">
   					<h3 class="reasons-heading">Мало туристов</h3>
   					<div class="other-reasons">
   						<p class="reason-number">- №5 -</p>
@@ -107,14 +110,14 @@
   					<span class="label-text">Дата заезда</span>
   				</label>
   				<input type="text" name="date-in" id="date-in" value="2017-04-24">
-          <button type="button" aria-label="Выберите дату заезда">
+          <button type="button" aria-label="Выберите дату заезда">Выбор даты заезда
           </button>
   			
   				<label for="date-out">
   					<span class="label-text">Дата выезда</span>
   				</label>
   				<input type="text" name="date-out" id="date-out" value="2017-07-04">
-          <button type="button" aria-label="Выберите дату выезда">
+          <button type="button" aria-label="Выберите дату выезда">Выбор даты выезда
           </button>
   			
   				<label for="adults-quantity">
@@ -133,7 +136,7 @@
           <input type="text" name="children-quantity" id="children-quantity" value="0">
           <button type="submit" aria-label="Добавить"><span class="symbols">+</span></button>
 
-          <button type="submit" aria-label="Кнопка поиска">
+          <button class="find" type="submit" aria-label="Кнопка поиска">
   				Найти
   			  </button>	
         </form> 
