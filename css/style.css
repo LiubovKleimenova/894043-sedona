@@ -45,8 +45,11 @@ main {
 .site-navigation a:hover,
 .site-navigation a:focus {
 	color: #81b3d2;
+	outline: none; /*при фокусе с клавиатуры есть?*/
 }
 
+
+/*не работает?*/
 .site-navigation a:active {
 	color: rgba(0 0 0 0.3);
 }
@@ -63,13 +66,18 @@ main {
 
 /*не работает??*/
 .about-sedona-general::before {
+	content: "";
 	background-image: url("img/background-photo.jpg");
 }
 
 .about-sedona-reasons {
 	background-color: #ffffff;
 }
+.reasons ul {
+	margin: 0;
+	padding: 0;
 
+}
 .reasons li {
 	margin: 0; /*почему отступы от левого края?*/
     padding: 0;
@@ -81,9 +89,8 @@ main {
     color: #ffffff;
 }
 
-}
 .other {
-    background-color: #eeeeee; /*почему не работает?*/
+    background-color: #eeeeee; 
     color: #333333;
 }
 
@@ -127,6 +134,8 @@ main {
 	line-height: 26px;
 }
 
+
+/*ПОИСК ГОСТИНИЦЫ В СЕДОНЕ/ это ссылка? состояния: покой, активн, нажатие*/
 .hotels-search-table {
 	color: #ffffff;
 	font-size: 21px;
@@ -134,7 +143,14 @@ main {
 	background-color: #766357;
 }
 
-/*не работет?*/
+.button {
+	outline: none;
+
+	font: inherit;
+	font-size: 14px; 
+	color: #ffffff;
+}
+
 .find {
 	background-color: #81b3d2;
 	border: none;
@@ -144,17 +160,38 @@ main {
 	color: #ffffff;
 }
 
+button.find:focus,
+button.find:hover {
+	background-color: #669ec0;
+	outline: none;
+}
+
+/*не работает*/
+button.find:active {
+	background-color: #5496bd;
+	color: rgba(255 255 255 0.3);
+}
+
 .hotels {
 	text-align: left;
 
 	background-color: #ffffff;
 }
 
-.hotel-name {
+.hotel-name a{
 	color: #000000;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
+}
+
+.hotel-name a:focus,
+.hotel-name a:hover {
+	color: #81b3d2;
+}
+
+.hotel-name a:active {
+	color: rgba(0 0 0 0.3);
 }
 
 .rating {
@@ -164,22 +201,37 @@ main {
     background-color: #f2f2f2;
 }
 
-.button {
-	border: none;
-
-	font: inherit;
-	font-size: 14px; 
-	color: #ffffff;
-}
-
-.details {
+.details a{
 	background-color: #81b3d2;
 }
 
-.booking {
+.details a:hover,
+.details a:focus {
+	background-color: #669ec0;
+	outline: none;
+}
+
+.booking a{
 	background-color: #776357;
+}
+
+.booking a:hover,
+.booling a:focus {
+	background-color: #604e43;
+	outline: none;
 }
 
 .page-footer {
 	background-color: #ffffff;
+}
+
+.hashtag a {
+	color: #000000;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+}
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+	/*цвет svg?*/
 }
