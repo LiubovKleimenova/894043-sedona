@@ -104,37 +104,38 @@
 
   		
       <section class="hotels-search">
-  			<h2 class="hotels-search-table">Поиск гостиницы в Седоне</h2>
+  			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2><!--это потом спрячется,пусть останется заголовок-->
+        <a class="hotels-search-table" href="#">Поиск гостиницы в Седоне</a>
   			<form action="https://echo.htmlacademy.ru" method="post">
   				<label for="date-in">
   					<span class="label-text">Дата заезда</span>
   				</label>
-  				<input type="text" name="date-in" id="date-in" value="2017-04-24">
+  				<input type="text" name="date-in" id="date-in" value="24 апреля 2017">
           <button type="button" aria-label="Выберите дату заезда">Выбор даты заезда
           </button>
   			
   				<label for="date-out">
   					<span class="label-text">Дата выезда</span>
   				</label>
-  				<input type="text" name="date-out" id="date-out" value="2017-07-04">
+  				<input type="text" name="date-out" id="date-out" value="4 июля 2017">
           <button type="button" aria-label="Выберите дату выезда">Выбор даты выезда
           </button>
   			
   				<label for="adults-quantity">
-  					<span class="label-text">Количество взрослых</span>
+  					<span class="label-text">Взрослые</span>
   				</label>
           
-          <button type="button" aria-label="Уменьшить"><span class="symbols">-</span></button>
-  				<input type="text" name="adults-quantity" id="adults-quantity" value="2">
-          <button type="button" aria-label="Добавить"><span class="symbols">+</span></button>
+          <button class="symbols" type="button" aria-label="Уменьшить">-</button>
+  				<input class="input-short" type="text" name="adults-quantity" id="adults-quantity" value="2">
+          <button class="symbols" type="button" aria-label="Добавить">+</button>
   			
   				<label for="children-quantity">
-  					<span class="label-text">Количество детей</span>
+  					<span class="label-text">Дети</span>
   				</label>
           
-  				<button type="button" aria-label="Уменьшить"><span class="symbols">-</span></button>
-          <input type="text" name="children-quantity" id="children-quantity" value="0">
-          <button type="button" aria-label="Добавить"><span class="symbols">+</span></button>
+  				<button class="symbols" type="button" aria-label="Уменьшить">-</button>
+          <input class="input-short" type="text" name="children-quantity" id="children-quantity" value="0">
+          <button class="symbols" type="button" aria-label="Добавить">+</button>
 
           <button class="find" type="submit" aria-label="Кнопка поиска">
   				Найти

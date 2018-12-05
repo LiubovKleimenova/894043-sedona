@@ -25,6 +25,9 @@ li {
 
 main {
     background-color: #ffffff;	
+    margin: 0;
+    padding: 0;
+
 }
 .main-header {
     margin: 0;
@@ -45,17 +48,16 @@ main {
 .site-navigation a:hover,
 .site-navigation a:focus {
 	color: #81b3d2;
-	outline: none; /*при фокусе с клавиатуры есть?*/
 }
 
 
 /*не работает?*/
 .site-navigation a:active {
-	color: rgba(0 0 0 0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .about-sedona-general {
-	margin: 0px;
+	margin: 0;
     color: #000000;
     font-size: 21px;
     line-height: 26px;
@@ -64,23 +66,18 @@ main {
 	background-color: #ffffff;
 }
 
-/*не работает??*/
+/*later...
 .about-sedona-general::before {
 	content: "";
-	background-image: url("img/background-photo.jpg");
+	background-image: url("img/background-photo.jpg");*/
 }
 
 .about-sedona-reasons {
 	background-color: #ffffff;
 }
-.reasons ul {
+.reasons {
 	margin: 0;
 	padding: 0;
-
-}
-.reasons li {
-	margin: 0; /*почему отступы от левого края?*/
-    padding: 0;
 }
 
 .first,
@@ -121,12 +118,10 @@ main {
 	font-size: 30px;
 	line-height: 36px;
 	color: #000000;
-
 }
 
 .hotels-search {
 	background-color: #ffffff;
-
 
 	color: #000000;
 	font-weight: bold;
@@ -143,12 +138,65 @@ main {
 	background-color: #766357;
 }
 
+.hotels-search-table:focus,
+.hotels-search-table:hover {
+	background-color: #604e43;
+}
+
+.hotels-search-table:active {
+	background-color: #503e33;
+	color: rgba(255,255,255,0.3);
+}
+
+.label-text {
+	font-weight: bold;
+	color: #000000;
+	font-size: 14px;
+	text-align: left;
+}
+
+input {
+	width: 346px;
+	height: 38px;
+	padding-left: 13px;
+	padding-bottom: 13px;
+	padding-top: 14px;
+	background-color: #f2f2f2;
+	border: none;
+
+	font-size: 14px;
+	text-transform: capitalize;
+	color: #000000;
+	font-weight: bold;
+}
+
+.input-short {
+	width: 38px;
+	height: 38px;
+
+	background-color: #f2f2f2;
+	border: none;
+
+	font-size: 14px;
+	text-transform: capitalize; /*работает только на первой букве??*/
+	color: #000000;
+	font-weight: bold;
+}
+
 .button {
 	outline: none;
 
 	font: inherit;
 	font-size: 14px; 
 	color: #ffffff;
+}
+
+.symbols {
+	width: 38px;
+	height: 38px;
+
+	background-color: #f2f2f2;
+	border: none;
 }
 
 .find {
@@ -160,16 +208,14 @@ main {
 	color: #ffffff;
 }
 
-button.find:focus,
-button.find:hover {
+.find:focus,
+.find:hover {
 	background-color: #669ec0;
-	outline: none;
 }
 
-/*не работает*/
-button.find:active {
+.find:active {
 	background-color: #5496bd;
-	color: rgba(255 255 255 0.3);
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .hotels {
@@ -208,7 +254,6 @@ button.find:active {
 .details a:hover,
 .details a:focus {
 	background-color: #669ec0;
-	outline: none;
 }
 
 .booking a{
@@ -218,7 +263,6 @@ button.find:active {
 .booking a:hover,
 .booling a:focus {
 	background-color: #604e43;
-	outline: none;
 }
 
 .page-footer {
@@ -231,7 +275,19 @@ button.find:active {
 	font-size: 21px;
 	line-height: 26px;
 }
-.footer-copyright a:hover,
+/*.footer-copyright a:hover,
 .footer-copyright a:focus {
-	/*цвет svg?*/
+	*/
+
+.social-button {
+	background-color: #81b3d2;
+}
+
+.social-button:focus,
+.social-button:hover {
+	background-color: #669ec0;
+}
+
+.social-button:active {
+	background-color: #5496bd;
 }
