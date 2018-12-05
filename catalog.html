@@ -23,7 +23,39 @@
   	</header>
   	<main>
       <h1 class="visually-hidden">Выбор гостиницы</h1>
-      <!--здесь форма с галочками,которую пока не нужно размечать --> 
+      <section class="filters">
+        <div class="filter-column-one">
+          <fieldset>
+            <legend>Инфраструктура</legend>
+            <input type="checkbox" name="pool" id="pool" checked> 
+            <label for="pool">Бассейн</label>
+            <input type="checkbox" name="parking" id="parking" checked> 
+            <label for="parking">Парковка</label>
+            <input type="checkbox" name="wifi" id="wifi" checked> 
+            <label for="wifi">Wi-fi</label>
+          </fieldset>
+        </div>
+
+        <div class="filter-column-two">
+          <fieldset>
+            <legend>Тип жилья</legend>
+            <input type="checkbox" name="hotel" id="hotel" checked> 
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" name="motel" id="motel" checked> 
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="apartment" id="apartment" checked> 
+            <label for="apartment">Апартаменты</label>
+          </fieldset>
+        </div>
+
+        <div class="filter-column-three">
+        </div>
+
+
+
+
+
+      </section>
       <section class="hotels">
         <ul class="hotels-choise">
           <li class="hotel-suggestion">

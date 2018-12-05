@@ -69,8 +69,9 @@ main {
 /*later...
 .about-sedona-general::before {
 	content: "";
-	background-image: url("img/background-photo.jpg");*/
-}
+	background-image: url("img/background-photo.jpg");
+	}*/
+
 
 .about-sedona-reasons {
 	background-color: #ffffff;
@@ -129,8 +130,6 @@ main {
 	line-height: 26px;
 }
 
-
-/*ПОИСК ГОСТИНИЦЫ В СЕДОНЕ/ это ссылка? состояния: покой, активн, нажатие*/
 .hotels-search-table {
 	color: #ffffff;
 	font-size: 21px;
