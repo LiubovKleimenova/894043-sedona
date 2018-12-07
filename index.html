@@ -8,46 +8,57 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  	<header class="main-header">
-  		<nav class="main-navigation">
+  <div class="body-container"> 
+  	
+    <header class="main-header">  		
+      <nav class="main-navigation">
   			<ul class="site-navigation">
+          <div class="container">
   				<li><a href="info.html">Информация</a></li>
   				<li><a href="pictures.html">Фото и видео</a></li>
   				<li><a href="map.html">Карта штата</a></li>
   				<li><a href="catalog.html">Гостиницы</a></li>
-  			</ul>	
+  			  </div>
+        </ul>	
+        
   		</nav>
   		<p class="main-logo">
   			<a><img src="img/logo.svg" width="140px" height="72px" alt="logo"></a>
   		</p>
   	</header>
+    
 
   	<main>
-  		<h1 class="visually-hidden">Седона - город в Аризоне</h1>
-  		<section class="about-sedona-general">
+      
+  		<h1 class="visually-hidden">Седона - город в Аризоне</h1> 		
+      <section class="about-sedona-general">
   			<div>
-  				Седона - небольшой городок в Аризоне, заслуживающий большего!
+  				Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!
   			</div>
   		</section>
 
   		<section class="about-sedona-reasons">
   			<h2 class="visually-hidden">Причины выбрать Седону</h2>
   			<p class="five-reasons">
-  				Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон
+  				Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
   			</p>
 
   			<ul class="reasons">
-  				
+  				<div class="all-reasons-container">
   				<li class="first">
-  					<h3 class="reasons-heading">Настоящий городок</h3>
-  					<div class="reason-one">
-  						<p class="reason-number">- №1 -</p>
-  						<p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-  						<img src="img/sedona-town.jpg" class="reason-one-picture" width="800px" height="256px" alt="Центр Седоны">	
-  					</div>
+            <div class="first-container">
+  					  <div class="reason-one">
+                <h3 class="reasons-heading">Настоящий городок</h3>
+  						  <p class="reason-number">&mdash; №1 &mdash;</p>
+  						  <p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <div class="content-picture">  
+  						  <img src="img/sedona-town.jpg" class="reason-one-picture" width="800px" height="256px" alt="Центр Седоны">	
+  					  </div>            
+            </div>
   					<ul class="inside-sedona">
   						<li>
-  							<h4 class="inside-sedona-heading">Жилье</h4>
+  							<h4 class="inside-sedona-heading">Жильё</h4>
   							<p class="reason-text">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
   						</li>
   						<li>
@@ -62,18 +73,22 @@
   				</li>
   				
   				<li class="second">
-  					<h3 class="reasons-heading">Там есть мост дьявола</h3>
-  					<div class="reason-two">
-  						<img src="img/devil-bridge.jpg" class="reason-two-picture" width="800px" height="256px" alt="Мост дьявола">
-  						<p class="reason-number">- №2 -</p>
-  						<p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>	
-  					</div>	
+  					<div class="second-container">
+  					  <div class="reason-two">
+                <h3 class="reasons-heading">Там есть<br>мост дьявола</h3>
+  						  <p class="reason-number">&mdash; №2 &mdash;</p>
+  						  <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>	
+  					  </div>
+              <div class="content-picture">
+                <img src="img/devil-bridge.jpg" class="reason-two-picture" width="800px" height="256px" alt="Мост дьявола">
+              </div>
+            </div>
   				</li>
 
   				<li class="other">
   					<h3 class="reasons-heading">Небольшая площадь</h3>
   					<div class="other-reasons">
-  						<p class="reason-number">- №3 -</p>
+  						<p class="reason-number">&mdash; №3 &mdash;</p>
   						<p class="reason-text">Все достопримечательности находятся очень близко</p>
             </div>  	
   				</li>
@@ -81,7 +96,7 @@
   				<li class="other">
   					<h3 class="reasons-heading">Красивая дорога</h3>
   					<div class="other-reasons">
-  						<p class="reason-number">- №4 -</p>
+  						<p class="reason-number">&mdash; №4 &mdash;</p>
   						<p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>	
             </div> 
   				</li>
@@ -89,67 +104,73 @@
   				<li class="other">
   					<h3 class="reasons-heading">Мало туристов</h3>
   					<div class="other-reasons">
-  						<p class="reason-number">- №5 -</p>
+  						<p class="reason-number">&mdash; №5 &mdash;</p>
   						<p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>	
             </div>   
   				</li>
+        </div>
 
   			</ul>
   		</section>
 
-  		<div class="suggestion">
-  			<b>Заинтересовались?</b>
-  			<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
-  		</div>
-
-  		
+  		  <div class="suggestion">
+  			  <b>Заинтересовались?</b>
+  			  <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
+  		  </div>
+	
       <section class="hotels-search">
-  			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2><!--это потом спрячется,пусть останется заголовок-->
+  			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
         <a class="hotels-search-table" href="#">Поиск гостиницы в Седоне</a>
   			<form action="https://echo.htmlacademy.ru" method="post">
-  				<label for="date-in">
-  					<span class="label-text">Дата заезда</span>
-  				</label>
-  				<input type="text" name="date-in" id="date-in" value="24 апреля 2017">
-          <button type="button" aria-label="Выберите дату заезда">Выбор даты заезда
-          </button>
+  				<div class="input-container">
+            <label for="date-in">
+  					  <span class="label-text">Дата заезда</span>
+  				  </label>
+  				  <input type="text" name="date-in" id="date-in" value="24 апреля 2017">
+            <button type="button" aria-label="Выберите дату заезда">B</button>
+          </div>
   			
-  				<label for="date-out">
-  					<span class="label-text">Дата выезда</span>
-  				</label>
-  				<input type="text" name="date-out" id="date-out" value="4 июля 2017">
-          <button type="button" aria-label="Выберите дату выезда">Выбор даты выезда
-          </button>
+          <div class="input-container">
+  				  <label for="date-out">
+  					  <span class="label-text">Дата выезда</span>
+  				  </label>
+  				  <input type="text" name="date-out" id="date-out" value="4 июля 2017">
+            <button type="button" aria-label="Выберите дату выезда">B</button>
+          </div>
   			
-  				<label for="adults-quantity">
-  					<span class="label-text">Взрослые</span>
-  				</label>
+          <div class="input-multiple-container">
+  				  <label for="adults-quantity">
+  					  <span class="label-text">Взрослые</span>
+  				  </label>
           
-          <button class="symbols" type="button" aria-label="Уменьшить">-</button>
-  				<input class="input-short" type="text" name="adults-quantity" id="adults-quantity" value="2">
-          <button class="symbols" type="button" aria-label="Добавить">+</button>
+            <button class="symbols" type="button" aria-label="Уменьшить">-</button>
+  				  <input class="input-short" type="text" name="adults-quantity" id="adults-quantity" value="2">
+            <button class="symbols" type="button" aria-label="Добавить">+</button>
   			
-  				<label for="children-quantity">
-  					<span class="label-text">Дети</span>
-  				</label>
+  				  <label for="children-quantity">
+  					  <span class="label-text">Дети</span>
+  				  </label>
           
-  				<button class="symbols" type="button" aria-label="Уменьшить">-</button>
-          <input class="input-short" type="text" name="children-quantity" id="children-quantity" value="0">
-          <button class="symbols" type="button" aria-label="Добавить">+</button>
+  				  <button class="symbols" type="button" aria-label="Уменьшить">-</button>
+            <input class="input-short" type="text" name="children-quantity" id="children-quantity" value="0">
+            <button class="symbols" type="button" aria-label="Добавить">+</button>
+          </div>
 
-          <button class="find" type="submit" aria-label="Кнопка поиска">
-  				Найти
-  			  </button>	
+          <div class="button-container">
+            <button class="find" type="submit" aria-label="Кнопка поиска">Найти
+  			    </button>	
+          </div>
         </form> 
   		</section>
     
   		<div class="map">
         <img src="img/map.jpg" width="1200px" height="594px" alt="В Седону можно добраться по шоссе 17, съехав на 89А или 179">
   		</div>
-
   	</main>
 
   	<footer class="page-footer">
+      <div class="container">
+
   		<p class="hashtag">
   			<a href="#">#visitsedona</a> <!--мне показалось, что это может быть ссылкой на хэштег в инстаграм или еще где-то-->	
   		</p>
@@ -164,8 +185,8 @@
   			<span>Website by</span>
   			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="115px" height="41px"></a>
   		</p>
-
+      </div> 
   	</footer>
-
+  </div>
   </body>
 </html>

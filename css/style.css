@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 1200px;
-  
+
     /*font*/
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
@@ -11,8 +10,17 @@ body {
     color: #333333;
     text-align: center;
     text-transform: uppercase;
-
     background-color: #f2f2f2;
+}
+
+.body-container { /*я так и не смогла отцентровать здесь флексами,
+ он у меня выравнивает срдержимое внутри этого контейнераБ а не сам 
+ контейнер  или я что-то делаю не так*/
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0,1,1,0.2);
 }
 
 a {
@@ -27,20 +35,54 @@ main {
     background-color: #ffffff;	
     margin: 0;
     padding: 0;
-
 }
+
 .main-header {
     margin: 0;
+    
     padding: 0;
+    position: relative;
 
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
     color: #000000;
     background-color: #ffffff;
-
 }
 
+.main-navigation {
+	margin: 0;
+	padding: 0;
+}
+
+.main-logo {
+	position: absolute;
+	top: 0px;
+	left: 530px;
+
+	margin: 0;
+}
+
+.site-navigation {
+	margin: 0;
+	padding: 0;
+}
+
+.site-navigation .container {
+    margin: 0;
+
+	display: flex;
+	justify-content: space-between; /*ТЗ требование п 3.4??*/
+	min-height: 56px;
+	align-items: center;
+}
+.site-navigation li {
+	flex-basis: 239px;
+}
+
+.site-navigation li:nth-of-type(2) {
+	margin-right: 244px;
+}
 .site-navigation a {
 	color: #000000;
 }
@@ -50,19 +92,23 @@ main {
 	color: #81b3d2;
 }
 
-
-/*не работает?*/
 .site-navigation a:active {
 	color: rgba(0, 0, 0, 0.3);
 }
 
 .about-sedona-general {
-	margin: 0;
+	
     color: #000000;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
+    letter-spacing: normal;
 
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 29px;
+    margin-top: 569px; /*временная мера, пока не узнаю как вставить фон*/
 	background-color: #ffffff;
 }
 
@@ -76,6 +122,10 @@ main {
 .about-sedona-reasons {
 	background-color: #ffffff;
 }
+.five-reasons {
+	margin-bottom: 56px;
+}
+
 .reasons {
 	margin: 0;
 	padding: 0;
@@ -83,6 +133,7 @@ main {
 
 .first,
 .second {
+	padding: 0;
 	background-color: #81b3d2;
     color: #ffffff;
 }
@@ -90,6 +141,7 @@ main {
 .other {
     background-color: #eeeeee; 
     color: #333333;
+    margin: 0;
 }
 
 .reasons-heading,
@@ -97,11 +149,17 @@ main {
 	font-weight: bold;
 	line-height: 21px;
     font-size: 21px;
+    margin: 0;
 }
 
 .inside-sedona {
 	background-color: #ffffff;
 	color: #333333;
+	margin:0;
+}
+
+.reason-text {
+	margin: 0;
 }
 
 .other .reasons-heading,
@@ -156,7 +214,7 @@ main {
 
 input {
 	width: 346px;
-	height: 38px;
+	margin-bottom: 30px;
 	padding-left: 13px;
 	padding-bottom: 13px;
 	padding-top: 14px;
@@ -171,7 +229,7 @@ input {
 
 .input-short {
 	width: 38px;
-	height: 38px;
+	margin-bottom: 54px;
 
 	background-color: #f2f2f2;
 	border: none;
@@ -236,7 +294,7 @@ input {
 }
 
 .hotel-name a:active {
-	color: rgba(0 0 0 0.3);
+	color: rgba(0,0,0,0.3);
 }
 
 .rating {
@@ -290,3 +348,169 @@ input {
 .social-button:active {
 	background-color: #5496bd;
 }
+
+.filters {
+    background-color: #669ec0;
+	background-image: url("img/filter-background.jpg");/*?????*/
+	
+	color: #ffffff;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip:rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+
+/*--------------сетка для блока причин----------------*/
+
+.first-container {
+	display: flex;
+	align-items: center;
+}
+.reason-one {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.second-container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.reason-two {
+	padding-left: 48px;
+	padding-right: 49px;
+}
+
+.inside-sedona {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 155px; /*временные паддинги до того, как оформлю содерж.внутри*/
+	padding-bottom: 105px;
+}
+
+.all-reasons-container {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.other {
+	flex-grow: 1;
+	padding-top: 50px;
+	padding-bottom: 118px; 
+}
+/*------------------------------------------------------------*/
+
+.suggestion {
+	width: 434px;
+	background-color: yellow;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+	margin-bottom: 52px;
+}
+
+
+/*------------------сетка для формы поиска?-------------------*/
+
+.hotels-search {
+	display: flex;
+	background-color: red;
+	flex-direction: column;
+	align-items: stretch;
+    
+
+	margin-left: 316px;
+	margin-right: 316px;
+}
+
+.hotels-search-table {
+	padding-left: 140px;
+	padding-right: 139px;
+	padding-top: 25px;
+	padding-bottom: 33px;
+
+	width: auto;
+	margin-bottom: 55px;
+}
+
+.button-container {
+	margin-bottom: 55px;
+} 
+
+/*---------------------footer-----------------------------*/
+.page-footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.hashtag {
+
+	background-color: green;
+	width: 400px;
+}
+
+.footer-social ul {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: red;
+	width: 400px;
+}
+
+.footer-copyright {
+
+    width: 400px;
+	background-color: blue;
+}
+
+
+
+/*-------------------------catalog page-------------------------*/
+
+/*--------------------блок с фильтрами в процессе...------------*/
+
+.filters .container {
+	display: flex;
+}
+
+.filter-column-one {
+}
+/*-------------------------catalog page-------------------------*/
+
+.hotel-suggestion {
+	display: flex;
+}
+.hotel-name {
+	margin: 0;
+}
+.rating {
+	margin: 0;
+	background-color: red;
+}
+
+.hotel-photo {
+	margin-left: 72px;
+	margin-right: 30px;
+	background-color: green;
+}
+
+.hotel-info {
+	width: 260px;
+	margin-right: 520px;
+	background-color: blue;
+
+}
+
+
+
+
