@@ -64,12 +64,8 @@ main {
 }
 
 .site-navigation {
-	margin: 0;
-	padding: 0;
-}
-
-.site-navigation .container {
     margin: 0;
+    padding: 0;
 
 	display: flex;
 	justify-content: space-between; /*ТЗ требование п 3.4??*/
@@ -393,7 +389,7 @@ input {
 	padding-bottom: 105px;
 }
 
-.all-reasons-container {
+.reasons {
 	display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -495,6 +491,7 @@ input {
 }
 .rating {
 	margin: 0;
+	margin-right: 73px;
 	background-color: red;
 }
 
@@ -506,7 +503,7 @@ input {
 
 .hotel-info {
 	width: 260px;
-	margin-right: 520px;
+	flex-grow: 1;
 	background-color: blue;
 
 }
