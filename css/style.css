@@ -16,6 +16,7 @@ body {
 .body-container { /*я так и не смогла отцентровать здесь флексами,
  он у меня выравнивает срдержимое внутри этого контейнераБ а не сам 
  контейнер  или я что-то делаю не так*/
+    position: relative;
     margin-right: auto;
     margin-left: auto;
     width: 1200px;
@@ -27,6 +28,11 @@ a {
     text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 li {
     list-style: none;
 }
@@ -35,28 +41,49 @@ main {
     background-color: #ffffff;	
     margin: 0;
     padding: 0;
+
 }
 
 .main-header {
     margin: 0;
-    
     padding: 0;
-    position: relative;
-
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
     color: #000000;
     background-color: #ffffff;
 }
+.main-header::after { /*я никак не могу вставить это фоновое изображениие,
+	и не пониаю что не так?
+
+	к тому же  чтобы оно залезло под остальные блоки мне приходится
+	задавать им всем relative position и z-index
+	*/
+    content: "";
+    position: absolute;
+
+    top: 0px; /**/
+    left: 0px;
+    width: 1200px;
+    height: 800px;
+	
+	background-color: red;
+	background-image: url("img/background-photo.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
 
 .main-navigation {
+	position: relative;
+	z-index: 2;
 	margin: 0;
 	padding: 0;
+	/*background-color: #ffffff; спрятан для видимости красного фона */
 }
 
 .main-logo {
 	position: absolute;
+	z-index: 2;
 	top: 0px;
 	left: 530px;
 
@@ -92,31 +119,34 @@ main {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.about-sedona-general {
-	
+.about-sedona-general {  /*переписала чтобы блок был шириной
+	во всю страницу  и его фон перекрывал фоновую картинку
+	или эта фоновая картинка должна быть обрезана?*/
+	position: relative;
+	display: block;
     color: #000000;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     letter-spacing: normal;
-
-    width: 440px;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 29px;
-    margin-top: 569px; /*временная мера, пока не узнаю как вставить фон*/
+    
+    padding-top: 61px;
+    padding-left: 380px;
+    padding-right: 380px;
+    padding-bottom: 15px;  /*почему-то вылез разрыв между этим 
+    блоком и "Рассмотри 5 причин..."?*/
+    margin-top: 508px; /*временная мера,*/
+    margin-bottom: 0px;
 	background-color: #ffffff;
+	z-index: 2;
+
 }
-
-/*later...
-.about-sedona-general::before {
-	content: "";
-	background-image: url("img/background-photo.jpg");
-	}*/
-
 
 .about-sedona-reasons {
 	background-color: #ffffff;
+	position: relative;
+	z-index: 2;
+	margin-top: 0px;
 }
 .five-reasons {
 	margin-bottom: 56px;
@@ -208,7 +238,7 @@ main {
 	text-align: left;
 }
 
-input {
+.hotels-search input {
 	width: 346px;
 	margin-bottom: 30px;
 	padding-left: 13px;
@@ -352,12 +382,22 @@ input {
 	color: #ffffff;
 }
 
-.visually-hidden {
-	position: absolute;
-	clip:rect(0, 0, 0, 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -368,8 +408,23 @@ input {
 	align-items: center;
 }
 .reason-one {
+	box-sizing: border-box;
+	width: 400px;
 	padding-left: 60px;
 	padding-right: 60px;
+}
+
+.first .content-picture { /*на макете 800х256*/ 
+    /*почему не вставляется фон?((*/
+    display: block;
+    height: 256px;
+    width: 800px;
+    background-color: green;
+    background-image: url("img/sedona-town.jpg"); 
+    }
+
+.content-picture { /*как изменить положение картинки*/
+    height: 256px;
 }
 
 .second-container {
@@ -378,6 +433,8 @@ input {
 	align-items: center;
 }
 .reason-two {
+	box-sizing: border-box;
+	width: 400px;
 	padding-left: 48px;
 	padding-right: 49px;
 }
