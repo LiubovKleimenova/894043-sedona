@@ -436,16 +436,91 @@ input[type="radio"].visually-hidden {
 .reason-two {
 	box-sizing: border-box;
 	width: 400px;
+
 	padding-left: 48px;
 	padding-right: 49px;
 }
 
 .inside-sedona {
+	position: relative;
 	display: flex;
 	justify-content: space-around;
-	padding-top: 155px; /*временные паддинги до того, как оформлю содерж.внутри*/
-	padding-bottom: 105px;
+	padding: 0; 
 }
+
+.inside-sedona li{
+
+ 
+    display: block;
+    width: 400px;
+       
+}
+
+.inside-sedona-heading {
+	padding-top: 160px;
+}
+
+.inside-sedona-reason .reason-text {
+	padding-top: 25px;
+	padding-bottom: 82px;
+}
+
+.inside-sedona-reason:first-of-type .reason-text {
+	width: 252px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.inside-sedona-reason:nth-of-type(2) .reason-text {
+	width: 284px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.inside-sedona-reason:last-of-type .reason-text {
+	width: 273px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* тут вообще не понимаю куда они привязываются, мне казалось,
+что должны к заголовку 
+
+и картинки фоновые снова не встают*/
+.inside-sedona-reason:last-of-type .inside-sedona-heading::before { 
+ 
+	position: absolute;
+	content: "";
+    
+    
+    display: block;
+    box-sizing: content-box;
+    width: 75px;
+    height: 75px;
+    background: black url("img/icon-3.svg") no-repeat; 
+
+}
+.inside-sedona-reason:first-of-type .inside-sedona-heading::before { 
+ 
+	position: absolute;
+	content: "";
+    
+    display: block;
+    box-sizing: content-box;
+    width: 75px;
+    height: 75px;
+    background: red url("img/icon-1.svg") no-repeat;  
+}
+.inside-sedona-reason:nth-of-type(2) .inside-sedona-heading::before { 
+
+	position: absolute;
+	content: "";
+    
+    display: block;
+    box-sizing: content-box;
+    width: 75px;
+    height: 75px;
+    background: blue url("img/icon-2.svg") no-repeat;  
+}
+
 
 .reasons {
 	display: flex;
