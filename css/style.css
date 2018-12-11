@@ -350,6 +350,7 @@ main {
 
 .page-footer {
 	background-color: #ffffff;
+	opacity: 0.9;
 }
 
 .hashtag a {
@@ -462,18 +463,26 @@ input[type="radio"].visually-hidden {
 /*------------------------------------------------------------*/
 
 .suggestion {
-	width: 434px;
+	box-sizing: content-box;
+	width: 435px;
 	background-color: yellow;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 45px;
-	margin-bottom: 52px;
+	margin-bottom: 138px;
+
 }
 
 
 /*------------------сетка для формы поиска?-------------------*/
+.modal {
+	position: relative;
+}
+
 
 .hotels-search {
+	position: absolute;
+	top: -86px;
 	display: flex;
 	background-color: red;
 	flex-direction: column;
@@ -487,8 +496,8 @@ input[type="radio"].visually-hidden {
 .hotels-search-table {
 	padding-left: 140px;
 	padding-right: 139px;
-	padding-top: 25px;
-	padding-bottom: 33px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 
 	width: auto;
 	margin-bottom: 55px;
@@ -498,15 +507,25 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 55px;
 } 
 
+.input-short {  /*как стилизовать поля ввода?*/
+	width: 38px;
+}
+
 /*---------------------footer-----------------------------*/
-.page-footer .container {
+.page-footer {
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: stretch;
+
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+
+	padding-top: 36px;
+	padding-bottom: 36px;
 }
 
 .hashtag {
-
 	background-color: green;
 	width: 400px;
 }
@@ -517,11 +536,11 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 	justify-content: center;
 	background-color: red;
+	box-sizing: border-box;
 	width: 400px;
 }
 
 .footer-copyright {
-
     width: 400px;
 	background-color: blue;
 }
