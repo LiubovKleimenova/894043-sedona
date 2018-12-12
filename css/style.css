@@ -221,29 +221,6 @@ li {
 	color: rgba(0,0,0,0.3);
 }
 
-.rating {
-    text-align: right;
-    color: #666666;
-    background-color: #f2f2f2;
-}
-
-.details a{
-	background-color: #81b3d2;
-}
-
-.details a:hover,
-.details a:focus {
-	background-color: #669ec0;
-}
-
-.booking a{
-	background-color: #776357;
-}
-
-.booking a:hover,
-.booling a:focus {
-	background-color: #604e43;
-}
 
 .page-footer {
 	background-color: #ffffff;
@@ -684,13 +661,28 @@ input[type="radio"].visually-hidden {
 	background: #669ec0 url("../img/filter-background.jpg") no-repeat;
 	background-position: 50% -300px;
 }
+
+.filter-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
 .half-one {
 	display: flex;
 	justify-content: space-between;
 }
 
 .filter-column-one {
-	display: block;
+	display: flex;
+	flex-direction: column; 
+	min-height: 217px;
+}
+
+.filter-column-two {
+	display: flex;
+	flex-direction: column;
 	min-height: 217px;
 }
 
@@ -713,25 +705,16 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-name {
+	margin: 0;
 	padding: 0;
 	margin-top: 30px;
-}
-
-.about-hotel {
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-.button-wrapper {
-	display: flex;
-	margin: 0;
-	padding: 0;
+	margin-bottom: 17px;
 }
 
 .rating {
+	position: relative;
 	align-self: flex-end;
-	display: inline-block;
+	
 	vertical-align: center;
 	box-sizing: border-box;
 	width: 110px;
@@ -743,23 +726,61 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 30px;
 	margin-right: 73px;
 	background-color: #f2f2f2;
+
+	color: #666666;
+}
+
+.rating::after {
+	position: absolute;
+	content: "";
+    width: 18px;
+    height: 17px;
+
+    margin-top: -70px;
+    margin-left: -10px;
+    background: url("../img/star.svg");
 }
 
 .hotel-photo {
 	align-self: center;
 	margin-left: 72px;
 	margin-right: 30px;
-	background-color: green;
-
 }
 
 .hotel-info {
 	width: 260px;
 	flex-grow: 1;
-	background-color: blue;
+	background-color: yellow;
+}
+
+.hotel-info .wrapper {
+	display: flex;
+}
+
+.details a{
+	background-color: #81b3d2;
+	padding: 7px 18px;
 
 }
 
+.details a:hover,
+.details a:focus {
+	background-color: #669ec0;
+}
 
+.booking a{
+	background-color: #776357;
+	padding: 7px 17px;
+	margin-left: 6px;
+}
+
+.booking a:hover,
+.booling a:focus {
+	background-color: #604e43;
+}
+.hotel-type,
+.hotel-price {
+	margin-bottom: 18px;
+}
 
 
