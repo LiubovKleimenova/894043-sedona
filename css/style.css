@@ -461,21 +461,9 @@ input[type="radio"].visually-hidden {
     padding-bottom: 25px;
     padding-left: 55px;
     padding-right: 55px;
+    background-color: grey;
 }
 
-.input-container.in {
-    padding-top: 0px;
-}
-
-.input-conteiner.in::after {
-	position: absolute;
-	content: "";
-    
-    width: 21px;
-    height: 22px;
-    
-    background:green url("../img/calendar.svg") no-repeat; 
-}
 
 .input-multiple-container {
 	display: flex;
@@ -485,21 +473,20 @@ input[type="radio"].visually-hidden {
 	width: 458px;
 	background-color: gray;
 
-	padding-left: 55px;
-    padding-right: 55px;
+	margin-left: auto;
+    margin-right: auto;
 }
-
 
 .label-text {
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 6px;
 	margin-right: 21px;
 }
 
 .hotels-search input {
 	display: inline-block;
-	flex-grow: 1;
-	padding-top: 14px;
+	flex-grow: 2;
+	padding-top: 10px;
 	padding-bottom: 13px; 
 	padding-left: 12px;
 	
@@ -510,6 +497,20 @@ input[type="radio"].visually-hidden {
 	text-transform: capitalize;
 	color: #000000;
 	font-weight: bold;
+}
+
+
+.input-container button::after { /*не могу понять откуда кусок серого фона под*/
+	position: absolute;
+	content: "";
+    
+    width: 21px;
+    height: 22px;
+    
+    background: #ffffff url("../img/calendar.svg") no-repeat; 
+    background-position: 100% 100%;
+    margin-top: 7px;
+    margin-left: -20px;   
 }
 
 .hotel-search input:hover {
