@@ -464,10 +464,9 @@ input[type="radio"].visually-hidden {
     background-color: grey;
 }
 
-
 .input-multiple-container {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
 	width: 458px;
@@ -475,6 +474,11 @@ input[type="radio"].visually-hidden {
 
 	margin-left: auto;
     margin-right: auto;
+}
+
+.column {
+	background-color: yellow;
+	border: solid 1px black;
 }
 
 .label-text {
