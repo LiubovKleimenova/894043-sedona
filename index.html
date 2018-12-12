@@ -10,7 +10,8 @@
   <body>
   <div class="body-container"> 
   	
-    <header class="main-header">  		
+    <header class="main-header">  
+      <div class="foil">	
       <nav class="main-navigation">
   			<ul class="site-navigation">
   				<li><a href="info.html">Информация</a></li>
@@ -18,16 +19,15 @@
   				<li><a href="map.html">Карта штата</a></li>
   				<li><a href="catalog.html">Гостиницы</a></li>
         </ul>	
-        
   		</nav>
   		<p class="main-logo">
   			<a><img src="img/logo.svg" width="140" height="72" alt="logo"></a>
   		</p>
+      </div> 
   	</header>
     
 
   	<main>
-      
   		<h1 class="visually-hidden">Седона - город в Аризоне</h1> 		
       <section class="about-sedona-general">
   			<div>
@@ -48,10 +48,8 @@
                 <h3 class="reasons-heading">Настоящий городок</h3>
   						  <p class="reason-number">&mdash; №1 &mdash;</p>
   						  <p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-              </div>
-              <div class="content-picture">  
-  						  <!--<img src="img/sedona-town.jpg" class="reason-one-picture" width="800" height="256" alt="Центр Седоны">-->	
-  					  </div>            
+              </div> 
+  						<img src="img/sedona-town.jpg" class="reason-one-picture" width="800" height="256" alt="Центр Седоны">	            
             </div>
   					<ul class="inside-sedona">
   						<li class="inside-sedona-reason">
@@ -76,9 +74,7 @@
   						  <p class="reason-number">&mdash; №2 &mdash;</p>
   						  <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>	
   					  </div>
-              <div class="content-picture">
-                <img src="img/devil-bridge.jpg" class="reason-two-picture" width="800" height="256" alt="Мост дьявола">
-              </div>
+              <img src="img/devil-bridge.jpg" class="reason-two-picture" width="800" height="256" alt="Мост дьявола">
             </div>
   				</li>
 
@@ -110,7 +106,7 @@
 
   		  <div class="suggestion">
   			  <b>Заинтересовались?</b>
-  			  <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
+  			  <p class="suggestion-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
   		  </div>
 	
       <div class="modal">
@@ -118,9 +114,9 @@
   			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
         <a class="hotels-search-table" href="#">Поиск гостиницы в Седоне</a>
   			<form action="https://echo.htmlacademy.ru" method="post">
-  				<div class="input-container">
+  				<div class="input-container in">
             <label for="date-in">
-  					  <span class="label-text">Дата заезда</span>
+  					  <span class="label-text">Дата заезда:</span>
   				  </label>
   				  <input type="text" name="date-in" id="date-in" value="24 апреля 2017">
             <button type="button" aria-label="Выберите дату заезда">B</button>
@@ -128,7 +124,7 @@
   			
           <div class="input-container">
   				  <label for="date-out">
-  					  <span class="label-text">Дата выезда</span>
+  					  <span class="label-text">Дата выезда:</span>
   				  </label>
   				  <input type="text" name="date-out" id="date-out" value="4 июля 2017">
             <button type="button" aria-label="Выберите дату выезда">B</button>

@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    /*padding-left: 10px; /*критерий Б13*
+    padding-right: : 10px;  закоммеентила чтобы пиксель перфект не уползал*/
 
     /*font*/
     font-family: "PT Sans", Arial, sans-serif;
@@ -16,9 +18,8 @@ body {
 .body-container { /*я так и не смогла отцентровать здесь флексами,
  он у меня выравнивает срдержимое внутри этого контейнераБ а не сам 
  контейнер  или я что-то делаю не так*/
-    position: relative;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;   
     width: 1200px;
     background-color: #ffffff;
     box-shadow: 0px 5px 15px rgba(0,1,1,0.2);
@@ -37,68 +38,47 @@ li {
     list-style: none;
 }
 
-main {
-    background-color: #ffffff;	
-    margin: 0;
-    padding: 0;
-
-}
-
 .main-header {
+	position: relative;
     margin: 0;
-    padding: 0;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
     color: #000000;
     background-color: #ffffff;
 }
-.main-header::after { /*я никак не могу вставить это фоновое изображениие,
-	и не пониаю что не так?
 
-	к тому же  чтобы оно залезло под остальные блоки мне приходится
-	задавать им всем relative position и z-index
-	*/
-    content: "";
-    position: absolute;
-
-    top: 0px; /**/
-    left: 0px;
+.foil {
     width: 1200px;
-    height: 800px;
+    height: 564px;
 	
-	background-color: red;
-	background-image: url("img/background-photo.jpg");
+	background-color: #81b3d2;
+	background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/background-photo.jpg");
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-size: 100%, 459px 353px, 100%;
+	background-position: center 507px, center 132px, 50% -26px;	
 }
 
 .main-navigation {
-	position: relative;
-	z-index: 2;
-	margin: 0;
-	padding: 0;
-	/*background-color: #ffffff; спрятан для видимости красного фона */
+	background-color: #ffffff;	
 }
 
 .main-logo {
 	position: absolute;
-	z-index: 2;
-	top: 0px;
+	top: -1px;
 	left: 530px;
-
 	margin: 0;
 }
 
 .site-navigation {
     margin: 0;
     padding: 0;
-
 	display: flex;
 	justify-content: space-between; /*ТЗ требование п 3.4??*/
 	min-height: 56px;
 	align-items: center;
 }
+
 .site-navigation li {
 	flex-basis: 239px;
 }
@@ -106,6 +86,7 @@ main {
 .site-navigation li:nth-of-type(2) {
 	margin-right: 244px;
 }
+
 .site-navigation a {
 	color: #000000;
 }
@@ -119,42 +100,28 @@ main {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.about-sedona-general {  /*переписала чтобы блок был шириной
-	во всю страницу  и его фон перекрывал фоновую картинку
-	или эта фоновая картинка должна быть обрезана?*/
-	position: relative;
-	display: block;
+.about-sedona-general { 
     color: #000000;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     letter-spacing: normal;
     
-    padding-top: 61px;
     padding-left: 380px;
     padding-right: 380px;
-    padding-bottom: 15px;  /*почему-то вылез разрыв между этим 
-    блоком и "Рассмотри 5 причин..."?*/
-    margin-top: 508px; /*временная мера,*/
-    margin-bottom: 0px;
-	background-color: #ffffff;
-	z-index: 2;
 
+    margin-top: 62px;
+    margin-bottom: 30px; 
+	background-color: #ffffff;
 }
 
 .about-sedona-reasons {
 	background-color: #ffffff;
-	position: relative;
-	z-index: 2;
-	margin-top: 0px;
-}
-.five-reasons {
-	margin-bottom: 56px;
 }
 
-.reasons {
-	margin: 0;
-	padding: 0;
+.five-reasons {
+	padding-bottom: 52px;
+	margin: 0; 
 }
 
 .first,
@@ -162,6 +129,14 @@ main {
 	padding: 0;
 	background-color: #81b3d2;
     color: #ffffff;
+    overflow: hidden;
+}
+.reason-one-picture { 
+   margin-top: -79px;
+}
+
+.reason-two-picture {
+	margin-top: -74px;
 }
 
 .other {
@@ -181,7 +156,7 @@ main {
 .inside-sedona {
 	background-color: #ffffff;
 	color: #333333;
-	margin:0;
+	margin: 0;
 }
 
 .reason-text {
@@ -193,21 +168,9 @@ main {
 	color: #000000;
 }
 
-.suggestion {
-	background-color: #ffffff;
-	color: #333333;
-}
-
-.suggestion b {
-	font-weight: bold;
-	font-size: 30px;
-	line-height: 36px;
-	color: #000000;
-}
 
 .hotels-search {
 	background-color: #ffffff;
-
 	color: #000000;
 	font-weight: bold;
 	font-size: 14px;
@@ -217,7 +180,6 @@ main {
 .hotels-search-table {
 	color: #ffffff;
 	font-size: 21px;
-
 	background-color: #766357;
 }
 
@@ -235,75 +197,11 @@ main {
 	font-weight: bold;
 	color: #000000;
 	font-size: 14px;
-	text-align: left;
-}
-
-.hotels-search input {
-	width: 346px;
-	margin-bottom: 30px;
-	padding-left: 13px;
-	padding-bottom: 13px;
-	padding-top: 14px;
-	background-color: #f2f2f2;
-	border: none;
-
-	font-size: 14px;
-	text-transform: capitalize;
-	color: #000000;
-	font-weight: bold;
-}
-
-.input-short {
-	width: 38px;
-	margin-bottom: 54px;
-
-	background-color: #f2f2f2;
-	border: none;
-
-	font-size: 14px;
-	text-transform: capitalize; /*работает только на первой букве??*/
-	color: #000000;
-	font-weight: bold;
-}
-
-.button {
-	outline: none;
-
-	font: inherit;
-	font-size: 14px; 
-	color: #ffffff;
-}
-
-.symbols {
-	width: 38px;
-	height: 38px;
-
-	background-color: #f2f2f2;
-	border: none;
-}
-
-.find {
-	background-color: #81b3d2;
-	border: none;
-
-    font: inherit;
-	font-size: 21px; 
-	color: #ffffff;
-}
-
-.find:focus,
-.find:hover {
-	background-color: #669ec0;
-}
-
-.find:active {
-	background-color: #5496bd;
-	color: rgba(255, 255, 255, 0.3);
+	
 }
 
 .hotels {
 	text-align: left;
-
 	background-color: #ffffff;
 }
 
@@ -326,7 +224,6 @@ main {
 .rating {
     text-align: right;
     color: #666666;
-
     background-color: #f2f2f2;
 }
 
@@ -404,137 +301,153 @@ input[type="radio"].visually-hidden {
 
 /*--------------сетка для блока причин----------------*/
 
-.first-container {
+.first-container,
+.second-container {
 	display: flex;
-	align-items: center;
-}
-.reason-one {
-	box-sizing: border-box;
-	width: 400px;
-	padding-left: 60px;
-	padding-right: 60px;
-}
-
-.first .content-picture { /*на макете 800х256*/ 
-    /*почему не вставляется фон?((*/
-    display: block;
-    height: 256px;
-    width: 800px;
-    background-color: green;
-    background-image: url("img/sedona-town.jpg"); 
-    }
-
-.content-picture { /*как изменить положение картинки*/
-    height: 256px;
+	align-items: flex-start;
+	height: 256px; /*я не знаю как избежать задания высоты этому блоку,
+	без нее он растягивается на всю высоту картинки*/
 }
 
 .second-container {
-	display: flex;
 	flex-direction: row-reverse;
-	align-items: center;
 }
+
+.reason-one,
 .reason-two {
 	box-sizing: border-box;
 	width: 400px;
+}
 
-	padding-left: 48px;
-	padding-right: 49px;
+.reasons-heading {
+	margin-top: 49px;
+	width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+}
+
+.reason-one .reason-text,
+.reason-two .reason-text,
+.other .reason-text {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 25px;
+}
+
+.reason-one .reason-text {
+	width: 280px;
+}
+
+.reason-two .reason-text {
+	width: 303px;
 }
 
 .inside-sedona {
-	position: relative;
 	display: flex;
 	justify-content: space-around;
 	padding: 0; 
 }
 
-.inside-sedona li{
-
- 
-    display: block;
+.inside-sedona li {
+	position: relative;
     width: 400px;
-       
 }
 
 .inside-sedona-heading {
-	padding-top: 160px;
+	padding-top: 162px;
 }
 
 .inside-sedona-reason .reason-text {
 	padding-top: 25px;
 	padding-bottom: 82px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .inside-sedona-reason:first-of-type .reason-text {
 	width: 252px;
-	margin-left: auto;
-	margin-right: auto;
 }
 .inside-sedona-reason:nth-of-type(2) .reason-text {
 	width: 284px;
-	margin-left: auto;
-	margin-right: auto;
 }
 .inside-sedona-reason:last-of-type .reason-text {
 	width: 273px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-/* тут вообще не понимаю куда они привязываются, мне казалось,
-что должны к заголовку 
-
-и картинки фоновые снова не встают*/
-.inside-sedona-reason:last-of-type .inside-sedona-heading::before { 
- 
-	position: absolute;
-	content: "";
-    
-    
-    display: block;
-    box-sizing: content-box;
-    width: 75px;
-    height: 75px;
-    background: black url("img/icon-3.svg") no-repeat; 
-
-}
 .inside-sedona-reason:first-of-type .inside-sedona-heading::before { 
- 
 	position: absolute;
 	content: "";
     
-    display: block;
-    box-sizing: content-box;
     width: 75px;
-    height: 75px;
-    background: red url("img/icon-1.svg") no-repeat;  
+    height: 74px;
+    left: 50%;
+    margin-left: -37px;
+    top: 61px;
+    background: url("../img/house.svg") no-repeat;  
 }
 .inside-sedona-reason:nth-of-type(2) .inside-sedona-heading::before { 
-
 	position: absolute;
 	content: "";
-    
-    display: block;
-    box-sizing: content-box;
+
     width: 75px;
-    height: 75px;
-    background: blue url("img/icon-2.svg") no-repeat;  
+    height: 74px;
+    left: 50%;
+    margin-left: -37px;
+    top: 61px;
+    background: url("../img/burger.svg") no-repeat;  
 }
 
+.inside-sedona-reason:last-of-type .inside-sedona-heading::before { 
+	position: absolute;
+	content: "";
+
+    width: 75px;
+    height: 75px;
+    left: 50%;
+    margin-left: -34px;
+    top: 57px;    
+    background: url("../img/gift.svg") no-repeat; 
+  }
 
 .reasons {
+	margin: 0;
+	padding: 0;
 	display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 
-
 .other {
-	flex-grow: 1;
-	padding-top: 50px;
-	padding-bottom: 118px; 
+	box-sizing: border-box;
+	width: 400px;	
 }
+
+.other .reason-text {
+	padding-bottom: 62px;
+	width: 262px;
+}
+
+.other:first-of-type .reason-text {  /*почему-то не работают так же как
+	в подсписке*/
+	background-color: yellow;
+	width: 208px;
+
+}
+
+/*
+.reasons:last-child {
+	background-color: gray;
+	width: 208px;
+	margin-left: auto;
+	margin-right: auto;
+}
+почему-то влияет не только на последний элемент, а на все кроме 1 */
+
+
+
+
 /*------------------------------------------------------------*/
 
 .suggestion {
@@ -543,13 +456,144 @@ input[type="radio"].visually-hidden {
 	background-color: yellow;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 45px;
-	margin-bottom: 138px;
+	margin-top: 47px;
+	margin-bottom: 136px;
+}
 
+.suggestion {
+	background-color: #ffffff;
+	color: #333333;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.suggestion b {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 36px;
+	color: #000000;
+}
+
+.suggestion-text {
+	margin-top: 25px; /*как сдвинуть этот текст?*/
 }
 
 
 /*------------------сетка для формы поиска?-------------------*/
+
+.input-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 458px;
+	background-color: yellow;
+    padding-bottom: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.input-container.in {
+    padding-top: 0px;
+}
+
+.input-conteiner.in::after {
+	position: absolute;
+	content: "";
+    
+    width: 21px;
+    height: 22px;
+    
+    background:green url("../img/calendar.svg") no-repeat; 
+}
+
+.input-multiple-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 458px;
+	background-color: gray;
+
+	padding-left: 55px;
+    padding-right: 55px;
+}
+
+
+.label-text {
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 21px;
+}
+
+.hotels-search input {
+	display: inline-block;
+	flex-grow: 1;
+	padding-top: 14px;
+	padding-bottom: 13px; 
+	padding-left: 12px;
+	
+	background-color: #f2f2f2;
+	border: none;
+
+	font-size: 14px;
+	text-transform: capitalize;
+	color: #000000;
+	font-weight: bold;
+}
+
+.input-short {
+	display: inline-block;
+	flex-shrink: 1;
+	box-sizing: border-box; /*что-то идет не так*/
+	width: 38px;
+	padding-top: 14px;
+	padding-bottom: 13px; 
+	padding-left: 12px;
+	background-color: #f2f2f2;
+	border: none;
+
+	font-size: 14px;
+	text-transform: capitalize; /*работает только на первой букве??*/
+	color: #000000;
+	font-weight: bold;
+}
+
+.button {
+	outline: none;
+
+	font: inherit;
+	font-size: 14px; 
+	color: #ffffff;
+}
+
+.symbols {
+	width: 38px;
+	height: 38px;
+
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.find {
+	background-color: #81b3d2;
+	border: none;
+
+    font: inherit;
+	font-size: 21px; 
+	color: #ffffff;
+}
+
+.find:focus,
+.find:hover {
+	background-color: #669ec0;
+}
+
+.find:active {
+	background-color: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+
 .modal {
 	position: relative;
 }
@@ -557,7 +601,7 @@ input[type="radio"].visually-hidden {
 
 .hotels-search {
 	position: absolute;
-	top: -86px;
+	top: -88px;
 	display: flex;
 	background-color: red;
 	flex-direction: column;
@@ -582,19 +626,13 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 55px;
 } 
 
-.input-short {  /*как стилизовать поля ввода?*/
-	width: 38px;
-}
-
 /*---------------------footer-----------------------------*/
 .page-footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-
-	position: absolute;
-	bottom: 0;
-	z-index: 2;
+    background-color: yellow;
+    opacity: 0.6; /*нужно чтоб только для фона, не для текстов*/
 
 	padding-top: 36px;
 	padding-bottom: 36px;
@@ -606,7 +644,6 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social ul {
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -616,8 +653,11 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-copyright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     width: 400px;
-	background-color: blue;
+	background-color: white;
 }
 
 
