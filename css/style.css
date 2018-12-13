@@ -298,7 +298,7 @@ input[type="radio"].visually-hidden {
 .other .reason-text {
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 25px;
+	margin-top: 24px;
 }
 
 .reason-one .reason-text {
@@ -736,39 +736,56 @@ input.input-short {
 .hotel-name {
 	margin: 0;
 	padding: 0;
-	margin-top: 25px;
-	margin-bottom: 10px;
+	margin-top: 26px;
+	margin-bottom: 9px;
+}
+
+.status {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.stars ul {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 73px;
+	margin-bottom: 29px;
+	padding: 0;
+}
+
+.stars li {
+	margin: 0;
+	padding: 0px 2px;
 }
 
 .rating {
-	position: relative;
-	align-self: flex-end;
-	
-	vertical-align: center;
 	box-sizing: border-box;
 	width: 110px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	padding-left: 16px;
 	padding-right: 13px;
 
-	margin-bottom: 30px;
 	margin-right: 73px;
+	margin-bottom: 27px;
 	background-color: #f2f2f2;
-
 	color: #666666;
 }
 
-.rating::after {
+/*.rating::after {
 	position: absolute;
 	content: "";
     width: 18px;
     height: 17px;
 
-    margin-top: -70px;
-    margin-left: -10px;
+
+    margin-top: -87px;
+    margin-left: 76px;
     background: url("../img/star.svg");
+
 }
+*/
 
 .hotel-photo {
 	align-self: center;
@@ -789,7 +806,7 @@ input.input-short {
 	margin: 0;
 	padding: 0;
 	margin-right: 6px;
-	margin-bottom: 17px;
+	margin-bottom: 20px;
 }
 
 .details a{
