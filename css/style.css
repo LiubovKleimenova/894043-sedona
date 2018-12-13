@@ -391,7 +391,7 @@ input[type="radio"].visually-hidden {
 }
 
 .other .reason-text {
-	padding-bottom: 62px;
+	padding-bottom: 58px;
 	width: 262px;
 }
 /*------------------------------------------------------------*/
@@ -401,8 +401,8 @@ input[type="radio"].visually-hidden {
 	width: 435px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 47px;
-	margin-bottom: 136px;
+	margin-top: 52px;
+	margin-bottom: 134px;
 
 	background-color: #ffffff;
 	color: #333333;
@@ -418,9 +418,13 @@ input[type="radio"].visually-hidden {
 }
 
 .suggestion-text {
-	margin-top: 25px; /*как сдвинуть этот текст?*/
+	margin-top: 23px; /*как сдвинуть этот текст?*/
 }
 
+.map {
+	height: 590px;
+	overflow: hidden;
+}
 
 /*------------------сетка для формы поиска?-------------------*/
 .search-form {
@@ -434,7 +438,7 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-    padding-bottom: 25px;
+    padding-bottom: 26px;
     border: none;
 }
 
@@ -443,8 +447,8 @@ input[type="radio"].visually-hidden {
 	border: none;
 	background: unset;
 	padding: 0;
-	margin-left: 430px;
-	margin-top: 10px;
+	margin-left: 428px;
+	margin-top: 8px;
 }
 
 .calendar {
@@ -465,29 +469,28 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: nowrap;
-	background-color: gray;
-
+	flex-wrap: nowrap;    
 	margin-left: auto;
     margin-right: auto;
-}
-
-.column {
-	background-color: yellow;
+    margin-top: 1px;
 }
 
 .label-text {
 	display: inline-block;
-	margin-top: 6px;
-	margin-right: 21px;
+	margin-top: 8px;
+	margin-right: 22px;
+}
+
+.adults .label-text{
+	display: inline-block;
+	margin-right: 40px;
 }
 
 .hotels-search input {
-
 	flex-grow: 2;
-	padding-top: 10px;
-	padding-bottom: 13px; 
-	padding-left: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px; 
+	padding-left: 13px;
 	
 	background-color: #f2f2f2;
 	outline: none;
@@ -510,21 +513,6 @@ input[type="radio"].visually-hidden {
 	outline: #e5e5e5;
 }
 
-
-/*.input-container button::after { 
-	position: absolute;
-	content: "";
-    
-    width: 21px;
-    height: 22px;
-    
-    background: #ffffff url("../img/calendar.svg") no-repeat; 
-    background-position: 100% 100%;
-    margin-top: 7px;
-    margin-left: -20px;   
-}
-*/
-
 .hotel-search input:hover {
 	background-color: #ebebeb;
 	border: none;
@@ -540,6 +528,8 @@ input.input-short {
 	flex-shrink: 1;
 	box-sizing: border-box; /*что-то идет не так, */
 	width: 38px;
+	height: 38px;
+	margin: 0;
 	padding-top: 14px;
 	padding-bottom: 13px; 
 	padding-left: 12px;
@@ -554,10 +544,11 @@ input.input-short {
 
 .button {
 	outline: none;
-
 	font: inherit;
 	font-size: 14px; 
 	color: #ffffff;
+	margin: 0;
+	padding: 0; 
 }
 
 .symbols {
@@ -566,6 +557,7 @@ input.input-short {
 
 	background-color: #f2f2f2;
 	border: none;
+	padding: 0;
 }
 
 .find {
@@ -581,7 +573,7 @@ input.input-short {
 	color: #ffffff;
 
 	padding-top: 17px;
-	padding-bottom: 22px;
+	padding-bottom: 15px;
 }
 
 .find:focus,
@@ -602,7 +594,7 @@ input.input-short {
 
 .hotels-search {
 	position: absolute;
-	top: -88px;
+	top: -87px;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -610,6 +602,7 @@ input.input-short {
 
 	margin-left: 316px;
 	margin-right: 316px;
+	box-shadow: 0px 7px 15px rgba(0,1,1,0.15); 
 }
 
 .hotels-search-table {
@@ -659,11 +652,28 @@ input.input-short {
 }
 
 .social-button {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 46px;
 	height: 48px;
 	margin-left: 6px;
 	background-color: #81b3d2;
+}
+
+.social-button:hover,
+.social-button:focus {
+	background-color: #669ec0;
+}
+
+.social-button:active{
+	background-color: #5496bd;
+	fill: rgba(255, 255, 0, 0.3);
+}
+.twitter:active,
+.facebook:active,
+.youtube:active {
+	fill: rgba(255, 255, 0, 0.3);
 }
 
 .footer-social li:first-of-type {
@@ -680,6 +690,7 @@ input.input-short {
 	align-items: center;
     width: 400px;
 }
+
 .website {
 	display: inline-block;
 	margin-right: 8px;
