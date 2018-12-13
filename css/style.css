@@ -15,14 +15,16 @@ body {
     background-color: #f2f2f2;
 }
 
-.body-container { /*я так и не смогла отцентровать здесь флексами,
- он у меня выравнивает срдержимое внутри этого контейнераБ а не сам 
- контейнер  или я что-то делаю не так*/
+.body-container { 
+	position: relative;
     margin-right: auto;
     margin-left: auto;   
     width: 1200px;
     background-color: #ffffff;
-    box-shadow: 0px 5px 15px rgba(0,1,1,0.2);
+    box-shadow: 0px 5px 15px rgba(0,1,1,0.2); 
+}
+.main-page {
+	position: relative;
 }
 
 a {
@@ -129,7 +131,6 @@ li {
 	padding: 0;
 	background-color: #81b3d2;
     color: #ffffff;
-    overflow: hidden;
 }
 .reason-one-picture { 
    margin-top: -79px;
@@ -221,21 +222,12 @@ li {
 	color: rgba(0,0,0,0.3);
 }
 
-
-.page-footer {
-	background-color: #ffffff;
-	opacity: 0.9;
-}
-
 .hashtag a {
 	color: #000000;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
 }
-/*.footer-copyright a:hover,
-.footer-copyright a:focus {
-	*/
 
 .social-button {
 	background-color: #81b3d2;
@@ -249,7 +241,6 @@ li {
 .social-button:active {
 	background-color: #5496bd;
 }
-
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -276,8 +267,7 @@ input[type="radio"].visually-hidden {
 .second-container {
 	display: flex;
 	align-items: flex-start;
-	height: 256px; /*я не знаю как избежать задания высоты этому блоку,
-	без нее он растягивается на всю высоту картинки*/
+
 }
 
 .second-container {
@@ -297,6 +287,11 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
     margin-bottom: 25px;
 }
+.reason-picture {
+	overflow: hidden;
+	height: 256px;
+}
+
 
 .reason-one .reason-text,
 .reason-two .reason-text,
@@ -498,7 +493,7 @@ input[type="radio"].visually-hidden {
 	border: none;
 
 	font-size: 14px;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	color: #000000;
 	font-weight: bold;
 }
@@ -539,7 +534,7 @@ input.input-short {
 	border: none;
 
 	font-size: 14px;
-	text-transform: capitalize; /*работает только на первой букве??*/
+	text-transform: uppercase; 
 	color: #000000;
 	font-weight: bold;
 }
@@ -568,7 +563,7 @@ input.input-short {
 	margin-left: auto;
 
     font: inherit;
-    text-transform: capitalize; /*???*/
+    text-transform: uppercase; /*???*/
 	font-size: 21px; 
 	color: #ffffff;
 
@@ -622,28 +617,34 @@ input.input-short {
 
 /*---------------------footer-----------------------------*/
 .page-footer {
+	position: absolute;
 	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-    opacity: 0.6; /*нужно чтоб только для фона, не для текстов*/
-
+    background-color: rgba(255, 255, 255, 0.9);
 	padding-top: 36px;
 	padding-bottom: 36px;
+	margin-top: -120px;
+}
+
+.inner-page .page-footer {
+	position: static;
+	background-color: rgba(255, 255, 255, 1);
+	margin-top: 0;
 }
 
 .hashtag {
 	align-self: center; 
+	margin: 0;
 	width: 400px;
 }
 
 .footer-social ul {
+	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start; /*почему не по центру?*/
 	box-sizing: border-box;
 	width: 400px;
 }
-
 
 .social-button {
 	display: block;
@@ -661,6 +662,7 @@ input.input-short {
 }
 
 .footer-copyright {
+	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -716,6 +718,10 @@ input.input-short {
 }
 
 /*-------------------------catalog page-------------------------*/
+.hotels {
+	margin: 0;
+
+}
 
 .hotels-choise {
 	margin: 0;
@@ -730,9 +736,8 @@ input.input-short {
 .hotel-name {
 	margin: 0;
 	padding: 0;
-	margin-top: 30px;
-	margin-bottom: 17px;
-	background-color: green;
+	margin-top: 25px;
+	margin-bottom: 10px;
 }
 
 .rating {
@@ -774,7 +779,6 @@ input.input-short {
 .hotel-info {
 	width: 260px;
 	flex-grow: 1;
-	background-color: yellow;
 }
 
 .hotel-info .wrapper {
@@ -782,16 +786,16 @@ input.input-short {
 }
 
 .sublayer {
-	margin-top: 0;
+	margin: 0;
 	padding: 0;
 	margin-right: 6px;
-	background-color: red;
+	margin-bottom: 17px;
 }
 
 .details a{
+	font-weight: bold;
 	background-color: #81b3d2;
-	padding: 7px 18px;
-
+	padding: 7px 18px 6px 17px;
 }
 
 .details a:hover,
@@ -805,8 +809,9 @@ input.input-short {
 }
 
 .booking a{
+	font-weight: bold;
 	background-color: #776357;
-	padding: 7px 17px;
+	padding: 7px 17px 6px 18px;
 }
 
 .booking a:hover,
@@ -821,8 +826,8 @@ input.input-short {
 
 .hotel-type,
 .hotel-price {
-	margin-bottom: 0;
-	margin-bottom: 18px;
+	margin: 0;
+	margin-bottom: 16px;
 }
 
 

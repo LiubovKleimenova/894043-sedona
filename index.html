@@ -7,9 +7,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-  <div class="body-container"> 
-  	
+  <body class="main-page">
+  <div class="body-container"> 	
     <header class="main-header">  
       <div class="foil">	
       <nav class="main-navigation">
@@ -49,7 +48,9 @@
   						  <p class="reason-number">&mdash; №1 &mdash;</p>
   						  <p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
               </div> 
-  						<img src="img/sedona-town.jpg" class="reason-one-picture" width="800" height="256" alt="Центр Седоны">	            
+              <div class="reason-picture">
+  						  <img src="img/sedona-town.jpg" class="reason-one-picture" width="800" height="256" alt="Центр Седоны">
+              </div>
             </div>
   					<ul class="inside-sedona">
   						<li class="inside-sedona-reason">
@@ -74,7 +75,9 @@
   						  <p class="reason-number">&mdash; №2 &mdash;</p>
   						  <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>	
   					  </div>
-              <img src="img/devil-bridge.jpg" class="reason-two-picture" width="800" height="256" alt="Мост дьявола">
+              <div class="reason-picture">
+                <img src="img/devil-bridge.jpg" class="reason-two-picture" width="800" height="256" alt="Мост дьявола">
+              </div>
             </div>
   				</li>
 
@@ -98,7 +101,7 @@
   					<h3 class="reasons-heading">Мало туристов</h3>
   					<div class="other-reasons">
   						<p class="reason-number">&mdash; №5 &mdash;</p>
-  						<p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>	
+  						<p class="reason-text">Большинство едет в Гранд Каньон и&nbsp;толпится там</p>	
             </div>   
   				</li>
   			</ul>
@@ -165,9 +168,9 @@
   	</main>
 
   	<footer class="page-footer">
-  		<p class="hashtag">
+  		<div class="hashtag">
   			<a href="#">#visitsedona</a> <!--мне показалось, что это может быть ссылкой на хэштег в инстаграм или еще где-то-->	
-  		</p>
+  		</div>
   		<div class="footer-social">
   			<ul>
   				<li><a class="social-button" href="#" aria-label="Седона в Твиттере"></a></li>
@@ -175,12 +178,12 @@
   				<li><a class="social-button" href="#" aria-label="Седона на Ютьюбе"></a></li>
   			</ul>	
   		</div>
-  		<p class="footer-copyright">
+  		<div class="footer-copyright">
   			<span class="website">Website by</span>
   			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="115" height="41"></a>
-  		</p>
-     
+  		</div> 
   	</footer>
+    
   </div>
   </body>
 </html>
