@@ -668,12 +668,12 @@ input.input-short {
 
 .social-button:active{
 	background-color: #5496bd;
-	fill: rgba(255, 255, 0, 0.3); /*не знаю как сделать чтоб и фон кнопки и заливка svg менялись*/
+	fill: rgba(255, 255, 255, 0.3); /*не знаю как сделать чтоб и фон кнопки и заливка svg менялись*/
 }
 .twitter:active,
 .facebook:active,
 .youtube:active {
-	fill: rgba(255, 255, 0, 0.3);
+	fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-social li:first-of-type {
