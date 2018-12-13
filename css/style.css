@@ -394,39 +394,16 @@ input[type="radio"].visually-hidden {
 	padding-bottom: 62px;
 	width: 262px;
 }
-
-.other:first-of-type .reason-text {  /*почему-то не работают так же как
-	в подсписке*/
-	background-color: yellow;
-	width: 208px;
-
-}
-
-/*
-.reasons:last-child {
-	background-color: gray;
-	width: 208px;
-	margin-left: auto;
-	margin-right: auto;
-}
-почему-то влияет не только на последний элемент, а на все кроме 1 */
-
-
-
-
 /*------------------------------------------------------------*/
 
 .suggestion {
 	box-sizing: content-box;
 	width: 435px;
-	background-color: yellow;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 47px;
 	margin-bottom: 136px;
-}
 
-.suggestion {
 	background-color: #ffffff;
 	color: #333333;
 	font-size: 14px;
@@ -446,17 +423,42 @@ input[type="radio"].visually-hidden {
 
 
 /*------------------сетка для формы поиска?-------------------*/
+.search-form {
+	width: 458px;
+	margin: 0;
+	padding-left: 55px; 
+}
 
 .input-container {
+	position: relative;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	width: 458px;
-	background-color: yellow;
     padding-bottom: 25px;
-    padding-left: 55px;
-    padding-right: 55px;
-    background-color: grey;
+    border: none;
+}
+
+.input-container button{
+	position: absolute;
+	border: none;
+	background: unset;
+	padding: 0;
+	margin-left: 430px;
+	margin-top: 10px;
+}
+
+.calendar {
+	fill: #cacaca;
+}
+
+.calendar:hover,
+.calendar:active {
+	fill: #000000;
+}
+
+.calendar:active {
+	fill: #81b3d2;
+	outline: none; 
 }
 
 .input-multiple-container {
@@ -464,7 +466,6 @@ input[type="radio"].visually-hidden {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: nowrap;
-	width: 458px;
 	background-color: gray;
 
 	margin-left: auto;
@@ -473,7 +474,6 @@ input[type="radio"].visually-hidden {
 
 .column {
 	background-color: yellow;
-	border: solid 1px black;
 }
 
 .label-text {
@@ -483,23 +483,35 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-search input {
-	display: inline-block;
+
 	flex-grow: 2;
 	padding-top: 10px;
 	padding-bottom: 13px; 
 	padding-left: 12px;
 	
 	background-color: #f2f2f2;
-	border: none;
+	outline: none;
 
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #000000;
 	font-weight: bold;
+	border: none;
+}
+
+.hotels-search input:hover,
+.hotels-search input:active, {
+	background-color: #ebebeb;	
+    outline: none;
+} 
+
+.hotels-search input:focus {
+	background-color: #ffffff;	
+	outline: #e5e5e5;
 }
 
 
-.input-container button::after { /*не могу понять откуда кусок серого фона под*/
+/*.input-container button::after { 
 	position: absolute;
 	content: "";
     
@@ -511,6 +523,7 @@ input[type="radio"].visually-hidden {
     margin-top: 7px;
     margin-left: -20px;   
 }
+*/
 
 .hotel-search input:hover {
 	background-color: #ebebeb;
@@ -591,7 +604,6 @@ input.input-short {
 	position: absolute;
 	top: -88px;
 	display: flex;
-	background-color: red;
 	flex-direction: column;
 	align-items: stretch;
     
