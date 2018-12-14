@@ -798,7 +798,7 @@ input.input-short {
 	margin: 0;
 	padding: 0;
 	margin-top: 26px;
-	margin-bottom: 8px;
+	margin-bottom: 7px;
 }
 
 .status {
@@ -811,7 +811,7 @@ input.input-short {
 	display: flex;
 	justify-content: flex-end;
 	margin-right: 70px;
-	margin-bottom: 27px;
+	margin-bottom: 25px;
 	padding: 0;
 }
 
@@ -831,7 +831,7 @@ input.input-short {
 	padding-right: 13px;
 
 	margin-right: 73px;
-	margin-bottom: 28px;
+	margin-bottom: 30px;
 	background-color: #f2f2f2;
 	color: #666666;
 }
@@ -862,7 +862,7 @@ input.input-short {
 .booking {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 15px; 
+	margin-bottom: 14px; 
 }
 
 .details a{
