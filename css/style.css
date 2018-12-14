@@ -512,12 +512,12 @@ input[type="radio"].visually-hidden {
 }
 
 .symbols:focus .minus,
-.symbols:focus .minus {
+.symbols:hover .minus {
 	fill: black;
 }
 
 .symbols:hover .plus,
-.symbols:hover .plus {
+.symbols:focus .plus {
 	stroke: black;
 }
 
