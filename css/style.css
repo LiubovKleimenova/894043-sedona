@@ -451,7 +451,7 @@ input[type="radio"].visually-hidden {
 }
 
 .calendar {
-	fill: #cacaca;
+	fill: #a9a9a9;;
 }
 
 .calendar:hover,
@@ -492,10 +492,56 @@ input[type="radio"].visually-hidden {
 	display: flex;
 }
 
+.children .label-text {
+	margin-right: 25px;
+}
+
 .three-blocks {
 	display: flex;
-
 }
+
+.symbols {
+	width: 38px;
+	height: 38px;
+	background-color: #f2f2f2;
+	border: none;
+	padding: 0;
+}
+
+.minus,
+.plus {
+	fill: #a9a9a9;
+	margin-top: 0.5em;
+}
+
+.plus {
+	stroke: #a9a9a9;
+}
+
+.symbols:focus .minus,
+.symbols:focus .plus {
+	fill: black;
+}
+
+.symbols:hover .minus,
+.symbols:hover .plus {
+	stroke: black;
+}
+
+.symbols:active,
+.symbols:focus,
+.symbols:hover {
+	outline: none;
+}
+
+.symbols:active .minus {
+	fill: #81b3d2;
+}
+
+.symbols:active .plus {
+	stroke: #81b3d2;
+}
+
 
 .hotels-search input {
 	flex-grow: 2;
@@ -548,15 +594,6 @@ input.input-short {
 	padding: 0; 
 }
 
-.symbols {
-	width: 38px;
-	height: 38px;
-
-	background-color: #f2f2f2;
-	border: none;
-	padding: 0;
-}
-
 .find {
 	background-color: #81b3d2;
 	border: none;
@@ -576,11 +613,13 @@ input.input-short {
 .find:focus,
 .find:hover {
 	background-color: #669ec0;
+	outline: none;
 }
 
 .find:active {
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
+	outline: none;
 }
 
 
