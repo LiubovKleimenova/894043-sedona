@@ -113,7 +113,7 @@ li {
     padding-right: 380px;
 
     margin-top: 62px;
-    margin-bottom: 30px; 
+    margin-bottom: 29px; 
 	background-color: #ffffff;
 }
 
@@ -161,6 +161,10 @@ li {
 }
 
 .reason-text {
+	margin: 0;
+}
+
+.reason-number {
 	margin: 0;
 }
 
@@ -229,18 +233,6 @@ li {
 	line-height: 26px;
 }
 
-.social-button {
-	background-color: #81b3d2;
-}
-
-.social-button:focus,
-.social-button:hover {
-	background-color: #669ec0;
-}
-
-.social-button:active {
-	background-color: #5496bd;
-}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -281,11 +273,11 @@ input[type="radio"].visually-hidden {
 }
 
 .reasons-heading {
-	margin-top: 49px;
+	margin-top: 48px;
 	width: 150px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 .reason-picture {
 	overflow: hidden;
@@ -298,7 +290,7 @@ input[type="radio"].visually-hidden {
 .other .reason-text {
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 24px;
+	margin-top: 19px;
 }
 
 .reason-one .reason-text {
@@ -325,7 +317,7 @@ input[type="radio"].visually-hidden {
 }
 
 .inside-sedona-reason .reason-text {
-	padding-top: 25px;
+	padding-top: 24px;
 	padding-bottom: 82px;
 	margin-left: auto;
 	margin-right: auto;
@@ -655,7 +647,7 @@ input.input-short {
 
 .button-container {
 	margin-bottom: 55px;
-	margin-top: 54px;
+	margin-top: 56px;
 } 
 
 /*---------------------footer-----------------------------*/
@@ -696,8 +688,11 @@ input.input-short {
 	align-items: center;
 	width: 46px;
 	height: 48px;
-	margin-left: 6px;
 	background-color: #81b3d2;
+}
+
+.footer-social li:not(:last-of-type) {
+	margin-right: 6px;
 }
 
 .social-button:hover,
