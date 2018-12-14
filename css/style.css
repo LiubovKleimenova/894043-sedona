@@ -814,14 +814,17 @@ input.input-short {
 .stars ul {
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 73px;
-	margin-bottom: 29px;
+	margin-right: 70px;
+	margin-bottom: 27px;
 	padding: 0;
 }
 
 .stars li {
 	margin: 0;
-	padding: 0px 2px;
+	padding: 0;
+	padding-right: 2px;
+	padding-left: 2px;
+	border: solid 1px rgba(255,255,255,0);
 }
 
 .rating {
