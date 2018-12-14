@@ -379,7 +379,8 @@ input[type="radio"].visually-hidden {
 
 .other {
 	box-sizing: border-box;
-	width: 400px;	
+	width: 400px;
+	align-self: stretch;	
 }
 
 .other .reason-text {
