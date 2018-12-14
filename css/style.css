@@ -76,6 +76,7 @@ li {
     margin: 0;
     padding: 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between; /*ТЗ требование п 3.4??*/
 	min-height: 56px;
 	align-items: center;
@@ -85,7 +86,7 @@ li {
 	flex-basis: 239px;
 }
 
-.site-navigation li:nth-of-type(2) {
+.site-navigation li:nth-of-type(4n+2) {
 	margin-right: 244px;
 }
 
@@ -100,6 +101,10 @@ li {
 
 .site-navigation a:active {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+a.current-page {
+	color: #766357;
 }
 
 .about-sedona-general { 
@@ -430,7 +435,7 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
     border: none;
 }
 
@@ -439,8 +444,8 @@ input[type="radio"].visually-hidden {
 	border: none;
 	background: unset;
 	padding: 0;
-	margin-left: 428px;
-	margin-top: 8px;
+	right: 10px;
+	margin-top: 9px;
 }
 
 .calendar {
@@ -541,6 +546,7 @@ input[type="radio"].visually-hidden {
 	padding-top: 12px;
 	padding-bottom: 12px; 
 	padding-left: 13px;
+	padding-right: 34px;
 	
 	background-color: #f2f2f2;
 	outline: none;
@@ -552,15 +558,20 @@ input[type="radio"].visually-hidden {
 	border: none;
 }
 
-.input-container input:hover,
-.input-container input:active, {
+.input-container input:hover{
 	background-color: #ebebeb;	
     outline: none;
 } 
 
-.hotel-search input:focus {
+.input-container input:focus,
+.input-container input:active {
 	background-color: #ffffff;
-	border: solid 1px #e5e5e5;
+	border: solid 2px #e5e5e5;
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	padding-left: 11px;
+	padding-right: 32px;
+
 }
 
 input.input-short {
@@ -576,6 +587,18 @@ input.input-short {
 	text-transform: uppercase; 
 	color: #000000;
 	font-weight: bold;
+}
+
+.input-multiple-container input:focus,
+.input-multiple-container input:active {
+    background-color: #ffffff;
+	border: solid 2px #e5e5e5;
+	padding-top: 2px;
+}
+
+.input-multiple-container input:hover {
+	background-color: #ebebeb;	
+    outline: none;
 }
 
 .button {
@@ -649,7 +672,7 @@ input.input-short {
 
 /*---------------------footer-----------------------------*/
 .page-footer {
-	position: absolute;
+	position: relative;
 	display: flex;
     background-color: rgba(255, 255, 255, 0.9);
 	padding-top: 36px;
@@ -834,6 +857,7 @@ input.input-short {
 
 .hotel-photo {
 	align-self: center;
+	display: flex;
 	margin-left: 72px;
 	margin-right: 30px;
 }
