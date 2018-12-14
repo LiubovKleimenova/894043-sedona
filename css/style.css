@@ -508,19 +508,9 @@ input[type="radio"].visually-hidden {
     outline: none;
 } 
 
-.hotels-search input:focus {
-	background-color: #ffffff;	
-	outline: #e5e5e5;
-}
-
-.hotel-search input:hover {
-	background-color: #ebebeb;
-	border: none;
-}
-
 .hotel-search input:focus {
 	background-color: #ffffff;
-	border-color: #e5e5e5;
+	border: solid 1px #e5e5e5;
 }
 
 input.input-short {
@@ -672,13 +662,6 @@ input.input-short {
 
  .social-button:active .icon {
 	opacity: 0.3;
-}
-
-.footer-social li:first-of-type {
-    margin-left: 78px;
-    background-image: url("../img/twitter.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
 }
 
 .footer-copyright {
