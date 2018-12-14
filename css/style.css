@@ -428,9 +428,8 @@ input[type="radio"].visually-hidden {
 
 /*------------------сетка для формы поиска?-------------------*/
 .search-form {
-	width: 458px;
-	margin: 0;
 	padding-left: 55px; 
+	padding-right: 55px;
 }
 
 .input-container {
@@ -585,19 +584,21 @@ input.input-short {
 .hotels-search {
 	position: absolute;
 	top: -87px;
+	left: 316px;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+
+	box-sizing: border-box;
     
 
-	margin-left: 316px;
-	margin-right: 316px;
+	margin-left: auto;
+	margin-right: auto;
 	box-shadow: 0px 7px 15px rgba(0,1,1,0.15); 
 }
 
 .hotels-search-table {
-	padding-left: 140px;
-	padding-right: 139px;
+	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 
