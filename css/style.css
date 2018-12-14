@@ -620,7 +620,6 @@ input.input-short {
 	position: relative;
 }
 
-
 .hotels-search {
 	position: absolute;
 	top: -87px;
@@ -628,10 +627,7 @@ input.input-short {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-
 	box-sizing: border-box;
-    
-
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: 0px 7px 15px rgba(0,1,1,0.15); 
@@ -658,7 +654,7 @@ input.input-short {
     background-color: rgba(255, 255, 255, 0.9);
 	padding-top: 36px;
 	padding-bottom: 36px;
-	margin-top: -120px;
+	margin-top: -119px;
 }
 
 .inner-page .page-footer {
