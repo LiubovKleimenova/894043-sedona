@@ -802,7 +802,7 @@ input.input-short {
 	margin: 0;
 	padding: 0;
 	margin-top: 26px;
-	margin-bottom: 9px;
+	margin-bottom: 8px;
 }
 
 .status {
@@ -829,31 +829,16 @@ input.input-short {
 
 .rating {
 	box-sizing: border-box;
-	width: 110px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	padding-left: 16px;
 	padding-right: 13px;
 
 	margin-right: 73px;
-	margin-bottom: 27px;
+	margin-bottom: 28px;
 	background-color: #f2f2f2;
 	color: #666666;
 }
-
-/*.rating::after {
-	position: absolute;
-	content: "";
-    width: 18px;
-    height: 17px;
-
-
-    margin-top: -87px;
-    margin-left: 76px;
-    background: url("../img/star.svg");
-
-}
-*/
 
 .hotel-photo {
 	align-self: center;
@@ -873,14 +858,21 @@ input.input-short {
 .sublayer {
 	margin: 0;
 	padding: 0;
-	margin-right: 6px;
+	margin-right: 5px;
 	margin-bottom: 20px;
+}
+
+.details,
+.booking {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px; 
 }
 
 .details a{
 	font-weight: bold;
 	background-color: #81b3d2;
-	padding: 7px 18px 6px 17px;
+	padding: 6px 18px 6px 17px;
 }
 
 .details a:hover,
@@ -896,7 +888,7 @@ input.input-short {
 .booking a{
 	font-weight: bold;
 	background-color: #776357;
-	padding: 7px 17px 6px 18px;
+	padding: 6px 17px 6px 18px;
 }
 
 .booking a:hover,
