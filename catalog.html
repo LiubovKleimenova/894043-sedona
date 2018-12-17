@@ -25,57 +25,97 @@
   	<main> <!--  здесь я только начала разметку без оформдениия-->
       <h1 class="visually-hidden">Выбор гостиницы</h1>
       <section class="filters">
-        <div class="half-one">
-          <div class="filter-column">
-            <ul class="filter-title">Инфраструктура
+        <div class="left-half"> 
+          <div class="filter-column one">
+            <p class="filter-title">Инфраструктура:</p>
+            <ul>
               <li class="feature">
-                <input type="checkbox" name="pool" id="pool" checked> 
-                <label for="pool">Бассейн</label>
+                <label for="pool" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="pool" id="pool" checked>
+                  <span class="checkbox-indicator"></span>
+                  Бассейн                
+                </label>
               </li>
               <li class="feature">
-                <input type="checkbox" name="parking" id="parking"> 
-                <label for="parking">Парковка</label>
+                <label for="parking" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="parking" id="parking">
+                  <span class="checkbox-indicator"></span>
+                  Парковка                
+                </label>
               </li>
               <li class="feature">
-                <input type="checkbox" name="wifi" id="wifi"> 
-                <label for="wifi">Wi-fi</label>
+                <label for="wifi" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="wifi" id="wifi">
+                  <span class="checkbox-indicator"></span>
+                  Wi-fi                
+                </label>
               </li>    
-            </ul> 
-          </div>
-
-          <div class="filter-column">
-            
-              <span class="filter-title">Тип жилья</span>
-              <input type="checkbox" name="hotel" id="hotel" checked> 
-              <label for="hotel">Гостиница</label>
-              <input type="checkbox" name="motel" id="motel" checked> 
-              <label for="motel">Мотель</label>
-              <input type="checkbox" name="apartment" id="apartment" checked> 
-              <label for="apartment">Апартаменты</label>
-            
+            </ul>
+          </div> 
+          <div class="filter-column two">
+            <p class="filter-title">Тип жилья:</p>
+            <ul>
+              <li class="feature">
+                <label for="hotel" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="hotel" id="hotel" checked>
+                  <span class="checkbox-indicator"></span>
+                   Гостиница                
+                </label>
+              </li>
+              <li class="feature">
+                <label for="motel" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                  <span class="checkbox-indicator"></span>
+                   Мотель                
+                </label>
+              </li>
+              <li class="feature">
+                <label for="apartment" class="feature-select">
+                  <input class="visually-hidden" type="checkbox" name="apartment" id="apartment" checked>
+                  <span class="checkbox-indicator"></span>
+                   Апартаменты                
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="half-two">
-          <div class="filter-column-three">
-            <fieldset>
-              <label class="filter-title" for="price-limits">Стоимость в сутки(Р)</label>
-                <table>
-                  <tr>
-                    <td>от 0</td>
-                    <td>до 5000</td>
-                  </tr>
-
-                </table>
-                <input type="range" name="price-limits" id="price-limits" min="0" max="5000">
-                <button>Показать</button>
-            </fieldset>
-          </div>
+        <div class="filter-range">
+            <div class="filter-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
         </div>
       </section>
 
       <div class="sort-results">
-        Найдено: 3
+        <div class="wrapper">
+          <p class="result">Найдено: 3</p>
+          <p class="sort">Сортировка:</p>
+          <ul class="parameter">
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>
+        </div>
+        <ul class="direction">
+          <li>
+            <a class="up" href="#"><span class="">По возрастанию</span></a>
+          </li>
+          <li>
+            <a class="down" href="#"><span class="">По убыванию</span></a>
+          </li>
+        </ul>
       </div>
+
     
       <section class="hotels">
         <ul class="hotels-choise">
