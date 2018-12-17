@@ -107,6 +107,12 @@ a.current-page {
 	color: #766357;
 }
 
+a.current-page:hover,
+a.current-page:active,
+a.current-page:focus {
+	color: #766357;
+}
+
 .about-sedona-general { 
     color: #000000;
     font-size: 21px;
@@ -828,7 +834,7 @@ input.input-short {
 
 	background-image: url(../img/checkbox-off.svg);
 }
-.feature-select input[type="checkbox"] + .checkbox-indicator:disabled; {
+.feature-select input[type="checkbox"]:disabled + .checkbox-indicator {
 	position: absolute;
 	top: -3px;
 	left: -40px;
@@ -836,19 +842,9 @@ input.input-short {
 	width: 23px;
 	height: 23px;
 
-	background-image: url(../img/checkbox-off.svg);
-	fill: #6a6a6a;
+	background-image: url(../img/checkbox-off-disable.svg);
 }
 
-
-/*
-.feature-select input[type="checkbox"] + .checkbox-indicator::before {
-	content: url("../img/checkbox-off.svg; <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#FFFFFF" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>");
-	
-	margin-top: -3px;
-	margin-left: -40px;
-    fill: red;
-}*/
 
 .feature-select input[type="checkbox"]:checked + .checkbox-indicator {
 	position: absolute;
@@ -861,6 +857,16 @@ input.input-short {
 	background-image: url(../img/checkbox-on.svg);
 }
 
+.feature-select input[type="checkbox"]:checked:disabled + .checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: -40px;
+
+	width: 26px;
+	height: 23px;
+
+	background-image: url(../img/checkbox-on-disable.svg);
+}
 
 
 .filter-range {
