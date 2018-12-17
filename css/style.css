@@ -58,7 +58,7 @@ li {
 	background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/background-photo.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%, 459px 353px, 100%;
-	background-position: center 507px, center 132px, 50% -26px;	
+	background-position: center 508px, center 132px, 50% -26px;	
 }
 
 .main-navigation {
@@ -85,6 +85,21 @@ li {
 .site-navigation li {
 	flex-basis: 239px;
 }
+
+.site-navigation li:nth-of-type(4n+1),
+.site-navigation li:nth-of-type(4n+2) {
+	text-align: left;
+    padding-left: 72px;
+    box-sizing: border-box;
+}
+
+.site-navigation li:nth-of-type(4n+3),
+.site-navigation li:nth-of-type(4n) {
+	text-align: right;
+    padding-right: 72px;
+    box-sizing: border-box;
+}
+
 
 .site-navigation li:nth-of-type(4n+2) {
 	margin-right: 244px;
@@ -486,6 +501,7 @@ input[type="radio"].visually-hidden {
 .calendar:hover,
 .calendar:active {
 	fill: #000000;
+	cursor: pointer;
 }
 
 .calendar:active {
@@ -561,6 +577,7 @@ input[type="radio"].visually-hidden {
 .symbols:focus,
 .symbols:hover {
 	outline: none;
+	cursor: pointer;
 }
 
 .symbols:active .minus {
@@ -661,6 +678,7 @@ input.input-short {
 .find:hover {
 	background-color: #669ec0;
 	outline: none;
+	cursor: pointer;
 }
 
 .find:active {
@@ -707,7 +725,7 @@ input.input-short {
 	padding: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center; /*почему не по центру?*/
+	justify-content: center;
 	box-sizing: border-box;
 	width: 400px;
 }
@@ -766,7 +784,7 @@ input.input-short {
 
 /*-------------------------catalog page-------------------------*/
 
-/*--------------------блок с фильтрами в процессе...------------*/
+/*--------------------блок с фильтрами ------------*/
 
 .filters {
 	color: #ffffff;
@@ -834,6 +852,7 @@ input.input-short {
 
 	background-image: url(../img/checkbox-off.svg);
 }
+
 .feature-select input[type="checkbox"]:disabled + .checkbox-indicator {
 	position: absolute;
 	top: -3px;
@@ -866,6 +885,30 @@ input.input-short {
 	height: 23px;
 
 	background-image: url(../img/checkbox-on-disable.svg);
+}
+
+.feature-select input[type="checkbox"]:focus + .checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: -40px;
+
+	width: 23px;
+	height: 23px;
+
+	background-image: url(../img/checkbox-off.svg);
+	box-shadow: 0 0 15px #81b3d2;
+}
+
+.feature-select input[type="checkbox"]:checked:focus + .checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: -40px;
+
+	width: 26px;
+	height: 23px;
+
+	background-image: url(../img/checkbox-on.svg);
+	box-shadow: 0 0 15px #81b3d2;
 }
 
 
@@ -1000,11 +1043,8 @@ input.input-short {
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
 }
-
-
 
 .sort-results {
 	box-sizing: border-box;
@@ -1014,12 +1054,16 @@ input.input-short {
 	padding-left: 72px;
 	padding-right: 72px;
 	padding-top: 32px;
-	padding-bottom: 32px;
+	padding-bottom: 28px;
     border-bottom: solid 1px rgba(0, 0, 0, 0.3);
 }
 
 .sort-results .wrapper {
 	display: flex;
+
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(0,0,0,0.3);
 }
 
 .sort-results .result {
@@ -1031,8 +1075,10 @@ input.input-short {
 }
 
 .sort-results .sort {
-	padding: 0;
 	margin: 0;
+	padding-left: 48px;
+	padding-right: 39px;
+	padding-top: 5px;
 
 }
 
@@ -1040,17 +1086,69 @@ input.input-short {
 	display: flex;
 	padding: 0;
 	margin: 0;
+	padding-top: 5px;
 }
 
 .parameter li {
-	padding: 0;
-	margin: 0;
+	padding-right: 32px;
+}
+
+.parameter a {
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: dotted;
+	border-bottom-color: #81b3d2;
+	border-bottom-width: 0.5px;
+}
+
+.parameter a:hover,
+.parameter a:focus {
+	color: #81b3d2;
+	border-bottom: dotted;
+	border-bottom-color: #81b3d2;
+	border-bottom-width: 0.5px;
+}
+
+.parameter .active-sort,
+.parameter .active-sort:hover,
+.parameter .active-sort:focus,
+.parameter .active-sort:active {
+	color: #81b3d2;
+	border-bottom: none;
+}
+
+.parameter a:active {
+	color: #000000;
+	border-bottom: none;
 }
 
 .direction {
 	display: flex;
-	padding: 0;
 	margin: 0;
+	padding-top: 2px;
+}
+
+.direction .arrow {
+    margin-left: 13px;
+}
+
+.direction a {
+	fill: #cacaca;
+}
+
+.direction a:hover,
+.direction a:focus {
+    fill : #000000;
+}
+
+.direction a:active {
+	fill: #81b3d2;
+}
+
+.direction .active-sort,
+.direction .active-sort:hover,
+.direction .active-sort:focus,
+.direction .active-sort:active {
+	fill: #81b3d2;
 }
 
 /*-------------------------catalog page-------------------------*/
@@ -1138,7 +1236,7 @@ input.input-short {
 .booking {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 14px; 
+	margin-bottom: 13px; 
 }
 
 .details a{
@@ -1164,7 +1262,7 @@ input.input-short {
 }
 
 .booking a:hover,
-.booling a:focus {
+.booking a:focus {
 	background-color: #604e43;
 }
 
