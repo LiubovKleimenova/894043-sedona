@@ -971,7 +971,11 @@ input.input-short {
 }
 
 .range-toggle:hover {
+	top: -10px;
 	background: #1c4f80;
+	border: 9px solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 }
 
 .range-toggle-min {
