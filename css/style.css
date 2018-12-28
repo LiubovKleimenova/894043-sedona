@@ -481,8 +481,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-search-table {
-	width: auto;
-	margin-bottom: 54px;
+	width: 568px;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	text-align: center;
@@ -491,6 +490,87 @@ input[type="radio"].visually-hidden {
 .search-form {
 	padding-left: 55px;
 	padding-right: 55px;
+	margin-top: 54px;
+	display: none;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translate(0, -100px);
+  }
+  50% {
+    transform: translate(0, -50px);
+  }
+  90% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, -100px);
+  }
+  50% {
+    transform: translate(0, -50px);
+  }
+  90% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.form-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.form-error {
+  animation: shake 0.6s;
 }
 
 .input-container {
@@ -1348,7 +1428,6 @@ input.input-short {
 	margin-bottom: 16px;
 }
 
-/*отключаю желтый фон для автозаполнения*/
 @-webkit-keyframes autofill {
 	to {
 		color: #000;
