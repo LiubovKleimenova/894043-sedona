@@ -86,9 +86,11 @@ img {
 .site-navigation li {
 	display: block;
 	-ms-flex-preferred-size: 239px;
-	    flex-basis: 239px;
+	    flex-basis: 167px;
 	-webkit-box-sizing: border-box;
-	    box-sizing: border-box;
+	    box-sizing: content-box;
+	padding-top: 15px;
+	padding-bottom: 15px; 
 }
 
 .site-navigation li:nth-of-type(4n+1),
