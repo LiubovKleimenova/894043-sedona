@@ -100,8 +100,6 @@ img {
 .site-navigation li:nth-of-type(4n+3),
 .site-navigation li:nth-of-type(4n) {
 	padding-right: 72px;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
 	text-align: right;
 }
 
